@@ -1,0 +1,520 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  .cn2Title {
+    font-family: MADE TOMMY;
+    font-size: 5.625rem;
+    font-weight: 400;
+  }
+
+  .jLine {
+
+    border-image-slice: 1;
+    border-bottom: 5px solid transparent;
+    border-image: linear-gradient(to right, rgba(90, 84, 245, 0) 0%, #5A54F5 16.94%, #4E5968 115.2%);
+
+  }
+
+  #mediaKit {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 82.97%, #FFFFFF 95.16%, #FFFFFF 109.27%), linear-gradient(147.1deg, rgba(126, 83, 255, 0.2) 5.67%, rgba(126, 83, 255, 0) 52.89%), #F8FAFF;
+    transform: rotate(-180deg);
+  }
+
+  .lBody{
+    font-family: 'Apple SD Gothic Neo';
+font-style: normal;
+font-weight: 400;
+font-size: 0.875rem;
+line-height: 150%;
+  }
+
+  .swiper-slide {
+        width: 140%;
+      }
+
+      .swiper-slide img{
+        width: auto
+      }
+
+</style>
+
+
+
+
+
+<div class='isBg-1 card rounded-0 border-0 masthead'>
+  <video autoplay muted loop id="myVideo">
+    <source src="/img/2/2.mov" type="video/mp4">
+  </video>
+  <div class="card-img-overlay h-100">
+    <div class="container h-100 justify-content-center text-center align-items-center d-flex" >
+      <div  data-aos="fade-up" >
+        <!-- position-absolute 쓰면 fade up 불가 -->
+        <h1 class="Title_1 text-white">{% block x1 %}합성 데이터로 새로운 패러다임을 만듭니다.{% endblock %}</h1>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="text-center d-flex align-content-center flex-wrap justify-content-center ourVision " style="height: 100vh; background-color:
+#4E5968 ; z-index:2; width: 100%" id = 'ourVision'>
+<div class="w-100">
+  <p class="SubTitle_1 Gray_2">Our Vision</p>
+  <p class = 'subTitle_1 Gray_3'>대한민국의 TOP AI Enabler Company를 지향합니다.</p>
+</div>
+</div>
+<section class="text-center d-flex align-content-center flex-wrap justify-content-center visionBack" style="height: 100vh; background-color:
+  #4E5968 ;" id = 'visionBack'>
+
+  <div class="w-100">
+    <p class="SubTitle_1 Gray_2">Our Numbers </p>
+  </div>
+  <div class="row mt-5 gx-5 w-100">
+    <div class="col-md col-12">
+      <h1 data-aos="fade-up" class="cn2Title Gray_6 mb-md-5 mb-0 ">1 st</h1>
+      <p class="Gray_4 Body_1 mb-5 mb-md-0">
+        {% block x3 %}
+        국내 최초 <br>
+        합성 데이터 활용 기업{% endblock %}</p>
+    </div>
+    <div class="col-md-6 col-12">
+      <h1 data-aos="fade-up" class="cn2Title Gray_6 mb-md-5 mb-0 " data-aos-delay="200">10,000,000 <span><i class="plus icon fs-3"></i></span></h1>
+      <p class="Gray_4 Body_1 mb-5 mb-md-0">
+        {% block x4 %}
+        합성 데이터를 위해 <br>
+        수집한 원천 데이터 수{% endblock %}</p>
+
+    </div>
+    <div class="col-md col-12">
+      <h1 data-aos="fade-up" class="cn2Title Gray_6 mb-md-5 mb-0 " data-aos-delay="400">92 <span><i class="plus icon fs-3"></i></span></h1>
+      <p class="Gray_4 Body_1 mb-5 mb-md-0">
+        {% block x5 %}
+        프로젝트를 위해 보유한 <br>
+        AI 모델의 수(2022.2월 기준){% endblock %}
+      </p>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+<section class="card bg-transparent border-0 rounded-0" id = 'ourValue'>
+  <img src="/img/2/1.png" class="card-img rounded-0">
+  <div class="card-img-overlay d-flex ">
+    <div class="mt-auto mb-5 container" data-aos="fade-up">
+
+      <p class='SubTitle_1 Gray_3'>Our Core Value </p>
+      <h2 class='Gray_6 Title_2' style='' data-aos="fade-right">
+        {% block x6 %}
+        코드를 넘어, 더 나은 미래를 설계합니다.{% endblock %}</h2>
+
+    </div>
+  </div>
+</section>
+
+<section id="description" class="container">
+  <div class="row align-items-center justify-content-between" style="height: 100vh">
+    <div class="col-md-3" data-aos="fade-up" id="d1">
+      <p class='Title_1 Gray_1'>{% block x7 %}진정성 있는{% endblock %}</p>
+      <p class='Title_3 Gray_0'>{% block x8 %}‘진정성’있게, 서로에 대한 신뢰를
+        바탕으로 끊임없이 소통합니다.{% endblock %} </p>
+    </div>
+    <div class="col-md-3" data-aos="fade-up" id='d2' data-aos-delay="200">
+      <h1 class='Title_1 Gray_1'>{% block x9 %}함께 성장하는{% endblock %}</h1>
+      <p class='Title_3 Gray_0'>{% block x10 %}잠재력이 가득한 최고의 팀원들이
+        함께 멋진 미래를 만들어 나갑니다.{% endblock %}</p>
+
+    </div>
+    <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+      <h1 class='Title_1 Gray_1'>{% block x11 %}끊임없이 도전하는{% endblock %}</h1>
+      <p class='Title_3 Gray_0'>{% block x12 %}최선의 결과를 위해 고민하고 도전하며,
+        질문에 대한 해답을 찾아냅니다.{% endblock %}
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="journey"  style='position: relative;' >
+
+  <div class='container'>
+    <div class="row ">
+      <p class="SubTitle_1 Gray_3">Our Journey</p>
+      <p class="col-md-4 Gray_1 Title_1">
+        {% block x13 %}  대한민국 최고의 합성 데이터
+        기업으로 거듭나겠습니다.{% endblock %}
+      </p>
+    </div>
+  </div>
+
+  <img src="/img/2/line.png" style="
+    position: absolute;
+    z-index: 2;
+" class="mt-5 pt-5 offset-md-2 d-none d-md-block">
+
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+    {% for i in range(2020,2023) | reverse %} 
+      <div class="swiper-slide">
+        <div class="card border-0">
+          <div class="card-body">  
+            <h5 class="better ">{{ i }}</h5>
+            <div class="ui list Body_1 ">
+              {% for s in data %}
+            {% if s.name == i %}
+              <div class="item Gray_3 Body_1 mb-3">
+                <div class="header Gray_0 Body_1 lh-lg">{{ s.title }}</div>
+                {{ s.content }}
+              </div>
+              {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div> 
+    </div>  
+    <div class = 'container'>
+
+      <button id="" type="button" class = 'journeyPrev bg-transparent border-0'><img src = '/img/icon/04 arrow-left-circle.png' class = 'btn-sm-1'></button>
+      <button id="" type="button" class = 'journeyNext bg-transparent border-0'><img src = '/img/icon/05 arrow-right-circle.png' class = 'btn-sm-1'></button>
+  </div>
+  </div>
+
+
+
+</section>
+
+
+  <section id='ourLeaders' class = 'container' style = 'margin-top: 47vh;'>
+
+    
+    <h5 class = 'subTitle_1 Gray_3 my-3'>Our Leaders</h5>
+    <h2 class = 'Gray_1 Title_1 mb-5'>{% block x14 %}AI의 미래를 그리는 사람들{% endblock %}</h2>
+    <div class="row row-cols-2 g-4">
+      {% for s in data %}                                    
+     {% if s.category == 'companyLeader' %}
+      <div class="card px-3 border-0 col" >
+        <div class="row g-0 justify-content-between Gray_5_bg h-100" >
+          <div class="col-md-7 d-flex flex-column">
+            <div class="card-body p-4">            
+              <div class="card-title Gray_0 Body_1_eng">{{ s.name }} <span class="Gray_2 Body_2_eng ms-2">{{ s.title }}</span></div>
+            </div>
+            <div class="card-footer mt-auto bg-transparent border-0">
+                <ul class="ps-3 mt-auto">
+                  <p class="Gray_1 lBody ps-0" class = 'lHistory-{{ loop.index-8 }}'>{% block f1 %}{{ s.content | striptags(true) | escape | nl2br}}{% endblock %}</p>
+                  
+                </ul>
+                      
+              </div>
+          </div>
+          <div class="col-md-5 d-flex align-items-end">
+            <img src="/img/2/leaders/{{ loop.index -8}}.png" class="img-fluid mx-auto" alt="{{ s.name }}">
+          </div>
+        </div>
+      </div>
+{% endif %}
+{% endfor %}
+
+    </div>
+
+  </section>
+
+
+  <section id='ourTeam' class = 'container'>
+    <div class="card mb-3 border-0 h-100">
+      <div class="row g-0 my-5">
+
+        <div class="col-md-6 d-flex flex-column card-body">
+          <p class="SubTitle_1 Gray_3">Our Team</p>
+          <p class="card-text kr Title_1 Gray_1">
+            {% block x15 %}
+            함께이기에 <br>
+            빛이 나는 사람들{% endblock %}</p>
+          <p class="Gray_1 Title_2 mt-auto">{% block x16 %}그들의 이야기가 궁금하다면{% endblock %}
+           
+            <a href="/career" class="ms-3 text-dark goEng bg-transparent border-0 "><img src = '/img/icon/05 arrow-right-circle.png' class = 'btn-sm-1'></a>
+          </p>
+
+        </div>
+        <div class="col-md-6">
+          <img src="/img/2/2.png" class="img-fluid rounded-start w-100" alt="함께 더빛남">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <img src='/img/2/3.png' class='w-100'>
+
+  <section id='welfare' class='ms-md-5 ps-md-5' style='margin-top: 16vh'>
+    <p class="SubTitle_1 Gray_3">Our Welfare</p>
+    <p class="card-text kr Title_2 Gray_1 col-md-6">{% block x17 %}아낌없는 지원으로 업무 몰입 뿐 아니라,
+      팀원들의 성장과 자아실현까지 이끌어갑니다.{% endblock %}
+    <div class="swiper ourWelfare" style="margin-top: 20vh; ">
+      <div class="swiper-wrapper" >
+
+        {% for i in range(1,4) %}
+
+        <div class="swiper-slide">
+          <div class="row g-0 h-75">
+            <div class="col-md-4 h-100">
+              <img src="/img/2/{{loop.index + 3}}.png" class="img-fluid" alt="{{ i.title }}">
+            </div>
+            <div class="col-md-7 offset-md-1 d-flex flex-column">
+              <p class=" Title_3 mt-auto Gray_0 ">{{say1[i]['title'] }}
+              </p>
+              <p class="Body_2 col-md-8 Gray_1">{{  say1[i]['description'] }}</p>
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+      </div>
+
+      <div class = 'mt-5'>
+      <!-- <span class='welfare-prev me-5'><i class="bi bi-arrow-left-circle Gray_2 fs-1"></i></span>
+      <span class='welfare-next'><i class="bi bi-arrow-right-circle Gray_2 fs-1"></i></span> -->
+      
+      <button name = 'L' type="button" class = 'welfare-prev me-3 bg-transparent border-0'><img src = '/img/icon/04 arrow-left-circle.png' class = 'btn-sm-1'></button>
+      <button name = 'R' type="button" class = 'welfare-next bg-transparent border-0'><img src = '/img/icon/05 arrow-right-circle.png' class = 'btn-sm-1'></button>
+
+    </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section id='story' class='row g-0 '
+    style='background: linear-gradient(96.7deg, rgba(255, 255, 255, 0) -7.21%, #FFFFFF 138.74%), #5A54F5; margin-top: 45vh;'>
+    <div class="col-md-4 position-relative text-white d-flex flex-column">
+      <p class="SubTitle_1 mt-5 offset-md-4">Our Story</p>
+      <div class="mt-auto Title_2_eng offset-md-4 mb-4" style="bottom:7vh;">More
+        <button type="button" class="circular ui icon button bg-transparent" data-bs-toggle="modal" data-bs-target="#exampleModal" style="">
+          <span class="" style="bottom: 3vh;"><img src="/img/icon/02 arrow-right-circle-dark.png" width="44" style="
+    margin-bottom: 2vh;
+"></span>
+        </button>
+      </div>
+    </div>
+    <div class='col-8'>
+      <img src="/img/2/ourStory.png" class="img-fluid w-100" alt="ourStory">
+    </div>
+  </section>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0">
+        <button type="button"
+          class="position-absolute top-0 start-100 translate-middle bg-white circular ui icon button"
+          data-bs-dismiss="modal" aria-label="Close"><i class="times circle outline icon"></i></button>
+        <iframe width="100%" height="630"
+          src="https://www.youtube.com/embed/8x1K-UDeTac?autoplay=1&cc_load_policy=1&mute=1" frameborder="0"
+          allow="accelerometer; autoplay;"></iframe>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="card rounded-0 border-0">
+    <section id='mediaKit' class='card-img' style=' height: 400vh'></section>
+
+    <div class="card-img-overlay p-0">
+
+      <section class='offset-md-5' style="margin-top: 30vh">
+        <p class='SubTitle_1 Gray_1'>
+          Media Kit
+        </p>
+        <div class="ui special cards">
+          <div class="card rounded-0" style="
+    height: fit-content;
+">
+            <div class="blurring dimmable image">
+              <div class="ui dimmer">
+                <div class="content">
+                  <div class="center">
+                    <a class="ui inverted button" href = '/img/2/mediaKit/logo_A.png' download>A TYPE 다운로드</a>
+                  </div>
+                </div>
+              </div>
+              <img src='/img/2/8.png' >
+            </div>
+
+          </div>
+          <div class="card rounded-0" style="
+    height: fit-content;
+">
+            <div class="blurring dimmable image">
+              <div class="ui dimmer">
+                <div class="content">
+                  <div class="center">
+                    <a class="ui inverted button" href = '/img/2/mediaKit/logo_B.png' download>B TYPE 다운로드</a>
+                  </div>
+                </div>
+              </div>
+              <img src='/img/2/9.png' >
+            </div>
+
+          </div>
+        </div>
+
+        <p class='Title_2_eng Gray_0 my-5'>Company Identity</p>
+        <p class='Body_2 Gray_1'>
+          {% block x18 %}     사명의 의미인 ‘Change New Code’의 CN을
+          심플하게 형상화한 심볼과 로고타입 A, B TYPE입니다.{% endblock %}
+        </p>
+
+        <a class="ui button" href = '/img/2/mediaKit/CNAI.zip' download>  {% block x19 %}C.I 다운로드{% endblock %}</a>
+
+      </section>
+
+      <img src='/img/2/10.png' class='w-100' style="margin-top: 45vh" id = 'map'>
+      <div class="offset-md-5">
+       <div class = "bg-white p-5" style="margin-top: -13vh; position:absolute">
+        <p class="SubTitle_1 Gray_2">Contact</p>
+        <p class="Title_1 col-md-7" style="margin-bottom: 5.5rem;">  {% block x20 %}CN.AI에게 궁금한 점이 있다면, 
+          언제든 문의 남겨주세요!{% endblock %}</p>
+   
+        <div class="row mb-5">
+          <div class="col-md-3 Tab Gray_1">CN.AI Seoul</div>
+          <div class="col-12 col-auto offset-md-1 Body_1 lh-lg">  {% block x21 %}서울특별시 서초구 서리풀길 29-9{% endblock %}<br>
+            <span class="Point_1"> {% block xx21 %}교대역 도보 13분 {% endblock %}</span></div>
+        </div>
+        <div class="row my-5">
+          <div class="col-md-3 Tab Gray_1">CN.AI Dajeon</div>
+          <div class="col-12 col-auto offset-1 Body_1 lh-lg">{% block x22 %}대전광역시 중구 중앙로 101 대전창업허브 4F{% endblock %}<br>
+            <span class="Point_1">{% block xx22 %}중구청역 도보 3분{% endblock %}</span></div>
+        </div>
+
+        <div class="row mt-5">
+          <a href = 'mailto:contact@cnai.ai' class="col-md-3 Tab Gray_1"><button class="ui button bgGray5 engFont">Contact us</button></a>
+          <div class="col-12 col-auto offset-1 Body_1 lh-lg">
+            <p>
+            <span class="Gray_0" style="
+            border-bottom: 2px solid black;
+        ">contact@cnai.ai</span>
+            <span class="Gray_2">문의하기 <i class="angle right icon"></i> </span> <br/>
+                 
+          유선 번호 <span class = 'Body_1_eng'>Call. 02 2088 1216 </span> <br/>
+          팩스 번호 <span class = 'Body_1_eng'>Fax. 050 4077 2926 </span></p>
+            
+        </div>
+      </div>
+</div>
+
+    </div>
+  </div>
+  {% endblock %}
+
+
+
+
+  {% block title %}CN.AI의 핵심 기술이 궁금하다면 {% endblock %}
+  {% block btn %} CORE TECH {% endblock %}
+
+  {% block localScript %}
+
+  <script>
+
+// $('.masthead')
+// .visibility({
+//   once: false,
+//   onBottomPassed: function() {
+//     $('.fixed.menu').transition('fade in');
+//   },
+//   onBottomPassedReverse: function() {
+//     $('.fixed.menu').transition('fade out');
+//   }
+// })
+
+$('.visionBack')
+.visibility({
+    once       : false,
+    continuous : true,
+    onPassing  : function(calculations) {
+      var newColor =calculations.percentagePassed;
+      $('.ourVision')
+        .css('opacity', newColor)
+      ;
+    }
+  })
+
+
+$('.changing.example .demo.segment')
+  .visibility({
+    once       : false,
+    continuous : true,
+    onPassing  : function(calculations) {
+      var newColor = 'rgba(0, 0, 0, ' + calculations.percentagePassed +')';
+      $(this)
+        .css('background-color', newColor)
+      ;
+    }
+  })
+;
+
+    var swiper = new Swiper(".mySwiper", {
+
+      slidesPerView: 1,
+      spaceBetween: 20,
+      centeredSlides: true,
+      navigation: {
+        prevEl: ".journeyPrev",
+        nextEl: ".journeyNext"
+      },
+      breakpoints:{
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    }
+      }
+
+
+      // pagination: {
+      //   el: ".swiper-pagination",
+      //   clickable: true,
+      // },
+    });
+
+    let welfare = new Swiper(".ourWelfare", {
+      // centeredSlides: true,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      // slidesPerView: "auto",
+      // centeredSlides: true,
+      // initialSlide: 1,
+
+      navigation: {
+        nextEl: ".welfare-next",
+        prevEl: ".welfare-prev",
+      },
+
+      breakpoints:{
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    }
+      }
+
+    });
+
+
+    $('.special.cards .image').dimmer({
+      on: 'hover'
+    });
+  </script>
+
+  {% endblock %}

@@ -1,0 +1,377 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  /* ---- button ---- */
+
+  .element-item {
+    width: 100%;
+  }
+
+  #load-more {
+    float: right;
+    margin: 5px;
+  }
+
+  .hidden {
+    visibility: hidden;
+    width: 0px !important;
+    height: 0px !important;
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .ui.table>thead>tr>th, .ui.table>thead>tr>tr {
+    color: white;
+    border-bottom: 1px solid white;
+  }
+</style>
+
+
+
+<section class="card bg-transparent border-0 rounded-0 masthead">
+  <img src="/img/4/1.png">
+  <div class="card-img-overlay">
+<section class="py-5 text-center container-fluid mb-5 text-light h-auto">
+  <div class = 'Title_1' style="margin-top: 40vh;" data-aos="fade-up">
+    {% block x1 %}CN.AI의 소식을 알려드립니다.{% endblock %}
+  </div>
+</section>
+</div>
+</section>
+
+
+<section id='news' class='container'>
+  <p class='my-5 Title_1 Gray_1'>{% block x2 %}한발 빠르게 받아보는 소식 {% endblock%}</p>
+  <div class="ui pointing secondary menu border-0">
+    <a class="item active " data-tab="first">Recent News</a>
+    <a class="item d-none " data-tab="second">Publications</a>
+  </div>
+
+  <div class="ui bottom attached tab segment border-0" data-tab="first">
+  
+ 
+
+
+    <section class='board'>
+
+
+      <div id="filters" class="button-group mb-5">
+        <button class="btn-blue-tab is-checked bg-transparent border-0 mx-md-3 mx-0 px-md-3 is-checked px-3"
+          data-filter="*">All</button>
+        <button class="btn-blue-tab bg-transparent border-0 mx-md-3 mx-0 px-md-3" data-filter=".Investment">Investment</button>
+        <button class="btn-blue-tab bg-transparent border-0 mx-md-3 mx-0 px-md-3" data-filter=".AI">AI</button>
+        <button class="btn-blue-tab bg-transparent border-0 mx-md-3 mx-0 px-md-3" data-filter=".medical">Medical</button>
+        <button class="btn-blue-tab bg-transparent border-0 mx-md-3 mx-0 px-md-3" data-filter=".syntheticData">Synthetic
+          Data</button>
+      </div>
+
+
+      <section class='isotope'>
+
+        {% for i in data %}
+        {% if i.category == 'communityNews'%}
+        <a class='row justify-content-between  element-item {{ i.name }} mb-5' data-category = '{{ i.name }}'  href= '{{ i.content }}' target = '_blank' style = 'height: 30vh'>
+          <div class='col-md-7 position-relative d-flex flex-column'>
+            {% if i.name =='syntheticData' %}
+            <p class='Label Gray_1'>Synthetic Data</p>
+            {% else %}
+            <p class='Label Gray_1'>{{i.name}}</p>
+            {% endif %}
+            <p class='Title_2 text-dark' >{{i.title}}</p>
+            <p class='mt-auto Label Gray_1 date' style='bottom:7vh;' aria-label = 'Date'>{{ i.content2 }}</p>
+          </div>
+          <div class='col-md-4 '>
+            <img src="/img/4/{{i.content2}}.png" class="img-fluid h-100" alt="{{ i.title }}">
+          </div>
+        </a>
+        {% endif %}
+        {% endfor %}        
+      </section>
+
+    </section>
+  </div>
+
+
+
+
+
+  <div class="ui bottom attached tab segment" data-tab="second">
+<img src = '/img/community-temp.png' class = 'w-100'>
+  </div>
+
+
+</section>
+<section id='investment' class='bgGray1 text-white py-5'>
+  <div class = 'container'>
+<p class = 'Title_1_eng my-5 py-5'>Investment</p>
+
+  <table class="table text-light w-100 mb-5 py-5">
+    <thead>
+      <tr class ='text-whtie'>
+        <th>날짜</th>
+        <th>내용</th>
+        <th>작성자</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class = 'border-bottom border-white'>2022.04.05</td>
+        <td class = 'border-bottom border-white'>
+          <a href= 'community/20220405' target = '_blank' class = 'text-white'>신주 발행 공고</a></td>
+          <td class = 'border-bottom border-white'>관리자</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</section>
+
+<section id='channel' >
+
+
+
+  <div id='c-box-1' class='container' style = 'margin-top: 90vh; margin-bottom: 90vh;'>
+    <p class='SubTitle_1 Gray_2 mb-5'>Official Channel</h5>
+    <p class='Gray_1 Title_1'>{% block x4 %}CN.AI의 다양한 채널을 만나보세요.{% endblock %}</h1>
+
+    <div class='row' >
+      <div class='col-12 col-md'>
+        <div class='col'>
+          <div class="card p-4 h-100 Gray_5_bg border-0">
+            <div class="row g-0 h-100 ">
+
+              <div class="col-md-8 h-100">
+                <div class="card-body d-flex flex-column h-100">
+
+                  <p class="Label Gray_2 mb-0">Instagram</p>
+                  <p class="Title_2_eng Gray_1">cnai.ai</p>
+
+                  <a href="https://www.instagram.com/cnai.ai/" target = '_blank' class="mt-auto Gray_2 d-none d-md-block">
+                    <i class="bi bi-arrow-right-circle"
+                      style="font-size: 3rem;"></i></a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <a href="https://www.instagram.com/cnai.ai/" target = '_blank'>
+                <img src="/img/4/01 cnaiai.png" class="img-fluid rounded-start" style="height: 5rem;" alt="...">
+              </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='col mt-4'>
+          <div class="card p-4 h-100 Gray_5_bg border-0">
+            <div class="row g-0 h-100 ">
+
+              <div class="col-md-8 h-100">
+                <div class="card-body d-flex flex-column h-100">
+
+                  <p class="Label Gray_2 mb-0">Instagram</p>
+                  <p class="Title_2_eng Gray_1">cn.table</p>
+
+                  <a href="https://www.instagram.com/cn.table/" target = '_blank' class="mt-auto Gray_2 d-none d-md-block "><i class="bi bi-arrow-right-circle"
+                      style="font-size: 3rem;"></i></a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <a href="https://www.instagram.com/cn.table/" target = '_blank'>
+                  <img src="/img/4/02 cntable.png" class="img-fluid rounded-start" style="height: 5rem;" alt="...">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='col-12 col-md m-height'>
+        <div class="card p-4 h-100 Gray_5_bg border-0 mt-md-0 mt-3">
+          <div class="row g-0 h-100 ">
+
+            <div class="col-md-8 h-100">
+              <div class="card-body d-flex flex-column h-100" id = 'mobile-1'>
+
+                <p class="Label Gray_2 mb-0">GitHub.io</p>
+                <p class="Title_2_eng Gray_1">Tech blog</p>
+
+                <span href="#" target = '_blank' class="mt-auto Gray_2 d-none d-md-block myPopup"><i class="bi bi-arrow-right-circle" style="font-size: 3rem;" data-content="준비 중 입니다"></i></span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <span href="#" target = '_blank' >
+              <img src="/img/4/03 github.png" class="img-fluid rounded-start" style="height: 5rem;" alt="...">
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md col-12 m-height">
+
+        <div class="card p-4 h-100 Gray_5_bg border-0 mt-md-0 mt-3">
+          <div class="row g-0 h-100 ">
+
+            <div class="col-md-8 h-100">
+              <div class="card-body d-flex flex-column h-100">
+
+                <p class="Label Gray_2 mb-0">Youtube</p>
+                <p class="Title_2_eng Gray_1">CNAI</p>
+
+                <a href="https://www.youtube.com/channel/UC2VAxP6sgZWvlVNpaNxMXLQ" target = '_blank' class="mt-auto Gray_2 d-none d-md-block "><i class="bi bi-arrow-right-circle" style="font-size: 3rem;"></i></a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <img src="/img/4/04 youtube.png" class="img-fluid rounded-start" style="height: 5rem;" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block title %}CN.AI 팀원들의 이야기가 궁금하다면 {% endblock %}
+{% block btn %} CAREER {% endblock %}
+
+{% block localScript %}
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/6.0.0/shuffle.min.js"></script>
+
+<script>
+$('.menu .item')
+  .tab()
+;
+$('.myPopup')
+  .popup()
+;
+
+  // init Isotope
+  var $container = $('.isotope').isotope({
+    itemSelector: '.element-item',
+    layoutMode: 'fitRows',
+    getSortData: {
+      name: '.name',
+      symbol: '.symbol',
+      number: '.number parseInt',
+      category: '[data-category]',
+      weight: function (itemElem) {
+        var weight = $(itemElem).find('.weight').text();
+        return parseFloat(weight.replace(/[\(\)]/g, ''));
+      }
+    }
+  });
+
+  // filter functions
+  var filterFns = {
+    // show if number is greater than 50
+    numberGreaterThan50: function () {
+      var number = $(this).find('.number').text();
+      return parseInt(number, 10) > 50;
+    },
+    // show if name ends with -ium
+    ium: function () {
+      var name = $(this).find('.name').text();
+      return name.match(/ium$/);
+    }
+  };
+
+  // bind filter button click
+  $('#filters').on('click', 'button', function () {
+    var filterValue = $(this).attr('data-filter');
+    // use filterFn if matches value
+    filterValue = filterFns[filterValue] || filterValue;
+    $container.isotope({
+      filter: filterValue
+    });
+  });
+
+  // bind sort button click
+  $('#sorts').on('click', 'button', function () {
+    var sortByValue = $(this).attr('data-sort-by');
+    $container.isotope({
+      sortBy: sortByValue
+    });
+  });
+
+  // change is-checked class on buttons
+  $('.button-group').each(function (i, buttonGroup) {
+    var $buttonGroup = $(buttonGroup);
+    $buttonGroup.on('click', 'button', function () {
+      $buttonGroup.find('.is-checked').removeClass('is-checked');
+      $(this).addClass('is-checked');
+    });
+  });
+
+  //****************************
+  // Isotope Load more button
+  //****************************
+  var initShow = 3; //number of items loaded on init & onclick load more button
+  var counter = initShow; //counter for load more button
+  var iso = $container.data('isotope'); // get Isotope instance
+
+  loadMore(initShow); //execute function onload
+
+  function loadMore(toShow) {
+    $container.find(".hidden").removeClass("hidden");
+
+    var hiddenElems = iso.filteredItems.slice(toShow, iso.filteredItems.length).map(function (item) {
+      return item.element;
+    });
+    $(hiddenElems).addClass('hidden');
+    $container.isotope('layout');
+
+    //when no more to load, hide show more button
+    if (hiddenElems.length == 0) {
+      jQuery("#load-more").hide();
+    } else {
+      jQuery("#load-more").show();
+    };
+
+  }
+
+  //append load more button
+  $container.after(`<h4 class="ui horizontal divider header">
+  <button id = "load-more" class = 'text-dark border-0 bg-transparent' ><i class="bi bi-plus-circle"></i></button>
+</h4>`);
+
+  //when load more button clicked
+  $("#load-more").click(function () {
+    if ($('#filters').data('clicked')) {
+      //when filter button clicked, set initial value for counter
+      counter = initShow;
+      $('#filters').data('clicked', false);
+    } else {
+      counter = counter;
+    };
+
+    counter = counter + initShow;
+
+    loadMore(counter);
+  });
+
+  //when filter button clicked
+  $("#filters").click(function () {
+    $(this).data('clicked', true);
+
+    loadMore(initShow);
+  });
+
+var items = document.getElementsByClassName("date"),i, len;
+
+// loop through all elements having class name ".my-class"
+for (i = 0, len = items.length; i < len; i++) {
+    let dates = items[i].innerHTML;    
+    items[i].innerHTML  = dates.slice(0,4) + '.' + dates.slice(4,6) + '.' + dates.slice(6,8)  
+    
+}
+
+
+</script>
+
+{% endblock %}
+

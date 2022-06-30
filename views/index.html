@@ -1,0 +1,704 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- data-bs-spy="scroll"  data-bs-offset="50" -->
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .bg-purple {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), linear-gradient(0deg, #7E53FF, #7E53FF);
+
+  }
+
+
+
+  /* Container DIV - automatically generated */
+  .simply-scroll-container {
+    position: relative;
+  }
+
+  /* Clip DIV - automatically generated */
+  .simply-scroll-clip {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* UL/OL/DIV - the element that simplyScroll is inited on
+Class name automatically added to element */
+  .simply-scroll-list {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .simply-scroll-list li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .simply-scroll-list li img {
+    border: none;
+    display: block;
+  }
+
+  /* Custom class modifications - adds to / overrides above
+
+.simply-scroll is default base class */
+
+  /* Container DIV */
+  .simply-scroll {
+    width: 100vw;
+    height: 200px;
+    margin-bottom: 0;
+  }
+
+  /* Clip DIV */
+  .simply-scroll .simply-scroll-clip {
+    /* width: 576px; */
+    width: 100vw;
+    height: 200px;
+  }
+
+  /* Explicitly set height/width of each list item */
+  .simply-scroll .simply-scroll-list li {
+    float: left;
+    /* Horizontal scroll only */
+    /* width: 10vw; */
+    height: 200px;
+  }
+
+  .News,
+  .Investment {
+    /* width: 55vh;
+    height: 18vh; */
+    width: 440px;
+    height: 180px;
+  }
+
+  .Team {
+    /* width: 47vh;
+    height: 34vh; */
+    width: 440px;
+    height: 340px;
+  }
+
+
+  .isotope {
+    /* background: #DDD; */
+    height: 590px;
+    ;
+    max-height: 590px;
+    /* max-height: 640px; */
+  }
+
+  .element-item {
+    margin: 0.5rem;
+  }
+
+  /* clear fix */
+  .isotope:after,
+  .element-item:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+ 
+/* 
+  .dis {
+  animation: fadeOut ease 8s;
+  -webkit-animation: fadeOut ease 8s;
+  -moz-animation: fadeOut ease 8s;
+  -o-animation: fadeOut ease 8s;
+  -ms-animation: fadeOut ease 8s;
+}
+@keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-ms-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+} */
+
+  .wrapper {
+    width: 100%;
+    height: auto;
+    /* max-height: 640px; */
+    /* padding: 0 50px; */
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    /* background-color: tomato; */
+  }
+
+  .swiper-pagination-bullet{
+
+    border-bottom: 2px solid white;
+    width: 4rem;
+    height: 0.2rem !important;
+    display: inline-block;
+    border-radius: 0%;
+  }
+
+  .swiper-pagination-bullet-active{
+    background: white;
+  }
+  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin:0
+  }
+
+  .if1{
+    display: block;       /* iframes are inline by default */
+    background: #000;
+    border: none;         /* Reset default border */
+    height: 100vh;        /* Viewport-relative units */
+    width: 100vw;
+  }
+</style>
+
+
+  <div class='isBg-1 card rounded-0 border-0 masthead'>
+    <video autoplay muted loop id="myVideo">
+      <source src="/img/home/1.mov" type="video/mp4">
+    </video>
+    <div class="card-img-overlay " >
+      <div class="container justify-content-center text-center align-items-center mhome" style="margin-top: 44vh;"  >
+ 
+        <p class = 'Title_1_eng text-white mb-5' >
+          <span id = '' class = 'hMove' data-aos="fade-up" data-aos-delay="100">
+           <span id = 'hMoveC'>C</span>
+         <span class = 'dis  me-5'>ODE</span>
+       </span>
+         <span id = 'hMoveC' class = 'hMove ' data-aos="fade-up"  data-aos-delay="900">N
+           <span class = 'dis  me-5'>EW</span>  
+         </span>
+         <span id = 'hMoveC' class = 'hMove ' data-aos="fade-up"  data-aos-delay="1600">A I</span>
+       </p>
+ 
+
+          <!-- position-absolute 쓰면 fade up 불가 -->
+          <h1 class="Title_1 text-white" data-aos="fade-up">
+            {% block x1 %}            
+            당신이 원하는 모든 것, AI로 이루어 드립니다
+            {% endblock %}
+          </h1>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+<div class='isBg-1'
+  style='background: linear-gradient(154.46deg, rgba(203, 186, 255, 0) 51.73%, #CBBAFF 89.37%), #FFFFFF;'>
+
+  <div class="container col-md-8 col-12 pt-4">
+    <section class="py-5 text-center container navbar-example" style='height:100vh;'>
+      <div class="row py-md-5 mt-5">
+        <div class="mx-auto">
+          <p class="better" data-aos="fade-up">BETTER DATA, FUTURE FOR AI</p> <br />
+          <p class="lead text-muted" data-aos="fade-up" style='margin-bottom: 8vw;'>  {% block x2 %}    데이터가 주도하는 인공지능의 미래 {% endblock%} </p>
+          <button id='goDown' class='border-0 bg-transparent'><i class="angle down icon"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="CN-HP01-3 our technology">
+      <div class="row" id="">
+        <div class="text-center Gray_2 SubTitle_1 pb-5 mb-5" id="down">Our Technology </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="card w-100 border-0 rounded-0 p-0" id="">
+          <img src="/img/home/-2.png" class="card-img rounded-0" alt="비즈니스에 가능성을 
+            더하는 AI Human">
+
+          <div class="card-img-overlay c1-img" id="tech">
+            <div class="container c1-img d-flex flex-column h-100 p-4">
+              <div class="row g-0 h-100">
+                <div class="col-md col-12 d-flex flex-column ">
+                  <p class="c1-title Title_1_eng mb-0 gray_0 text-white">Data Warehouse</p>
+                  <!-- <a href="/coretech" class="Body_1 Gray_1 text-mute">더 알아보기 <i class="angle right icon"></i></a> -->
+                  <div class="mt-auto ">
+                    <p class="Body_1 c1 transition hidden" style="display: block !important;">CN.AI Data Warehouse 플랫폼은 자동화 된 ML 개발환경과 더불어 합성데이터를 제공하고,
+                      On-premise와 SaaS를 동시에 지원하는 개방적이고 유연한 확장을 지원합니다.</p>
+                  </div>
+                </div>
+                <div class="col align-self-end">
+                  <button onclick="showUp($(this).attr('id'),'home')" id="c1" class="align-items-baseline border-0 bg-transparent float-end c-btn c1-btn ">
+                    <img class="btn-sm-1" src="/img/icon/00 more-dark.png">
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-12 ps-0 pe-md-3 pe-0">
+
+          <div class="mb-4 card w-100 border-0 rounded-0 p-0 h-100" id="">
+            <img src="/img/home/-1.png" class="card-img rounded-0 h-100" alt="비즈니스에 가능성을 
+              더하는 AI Human">
+
+            <div class="card-img-overlay c2-img rounded-0" id="" style="height: 100%">
+              <div class="container c2-img d-flex flex-column h-100 p-4">
+                <div class="row g-0 h-100">
+                  <div class="col-md-10 col-12 d-flex flex-column ">
+                    <p class="c2-title Title_1_eng mb-0 gray_0 text-white">{% block x4 %}Future AI를 위한 데이터 합성 솔루션{% endblock %}</p>
+                    <a href="/coretech#box2" class="Body_1 Gray_1 text-mute">{% block x3 %}더 알아보기{% endblock %} <i class="angle right icon"></i></a>
+                    <div class="mt-auto ">
+                      <p class="Body_1 c2 transition hidden " style="display: block !important;">empowers super-realistic, biologically-meaningful
+                        synthetic data. 데이터 공급이 어려웠던 다양한 분야에 AI를 위한 고품질의 데이터를 무한 공급합니다. </p>
+                    </div>
+                  </div>
+                  <div class="col align-self-end">
+                    <button onclick="showUp($(this).attr('id'),'home')" id="c2" class="align-items-baseline border-0 bg-transparent float-end c-btn c2-btn">
+                      <img class="btn-sm-1" src="/img/icon/00 more-dark.png">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-md-6 col-12 pb-0" style="
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+">
+          <div class="row" style="
+    /* flex-direction: column; */
+    flex: 1;
+">
+            <div class="mb-3 card w-100 border-0 rounded-0 p-0" id="">
+              <img src="/img/home/0.png" class="card-img rounded-0" alt="비즈니스에 가능성을 
+              더하는 AI Human">
+              <div class="card-img-overlay container c3-img d-flex flex-column h-100 p-5 rounded-0">
+                <div class="row g-0 h-100">
+                  <div class="col-md-10 d-flex flex-column ">
+                    <p class="c3-title Title_1_eng mb-0 gray_0">
+                      {% block x5 %}비즈니스에 가능성을
+                      더하는 AI Human{% endblock %}</p>
+                    <a href="/coretech" class="Body_1 Gray_1 text-mute">{% block xx3 %}더 알아보기 {% endblock %}<i class="angle right icon"></i></a>
+                    <div class="mt-auto ">
+                      <p class="Body_1 c3 transition hidden" style="font-size: large;">고도화된 음성 합성 TTS,영상 생성 LipSync,
+                        얼굴합성Faceswap으로 실제 인간과 구분할 수 없는 수준의 가상인간을 만듭니다. 가상인간 생성툴 STUDIO를 통해 언택트 시대의 소통을 혁신합니다.</p>
+                    </div>
+                  </div>
+                  <div class="col align-self-end">
+                    <button onclick="showUp($(this).attr('id'),'home')" id="c3" class="align-items-baseline border-0 bg-transparent float-end c-btn c3-btn">
+                      <img class="btn-sm-1" src="/img/icon/00 more-dark.png">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="
+    /* flex-direction: column; */
+    flex: 1;
+">
+            <div class="" id="" style="background: linear-gradient(108.12deg, #7E53FF 14.18%, rgba(126, 83, 255, 0) 43.27%), #5A54F5;">
+              <div class="container d-flex flex-column h-100 p-4">
+                <div class="row g-0 h-100">
+                  <div class="col-7 d-flex align-items-center">
+                    <p class=" Title_3 mb-0 text-white">{% block x6 %}
+                      AI Human의 베타 서비스를
+                      신청해보세요!{% endblock %}</p>
+
+                  </div>
+                  <div class="col my-auto">
+                    <a href="mailto:contact@cnai.ai" class="align-items-baseline border-0 Title_3 bg-transparent float-end">
+                      <img class="btn-sm-1" src="/img/icon/02 arrow-right-circle-dark.png">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="ourUseCases">
+      <div class="SubTitle_1 Gray_3" style='margin-top: 30vh;'>
+        Our Use Cases
+      </div>
+      <p class=' Title_2 my-4 pb-4 Gray_1'>
+        {% block x7 %}  데이터 합성 솔루션이 가져올 변화{% endblock %}
+      </p>
+  </div>
+
+
+
+  <div class="swiper mySwiper" style="
+        height: 70vh;
+    ">
+    <div class="swiper-wrapper">      
+      {% for i in range(1,4) %}
+      <div class="swiper-slide ">
+        <div class="row gx-0 justify-content-between"
+          style="background: linear-gradient(96.66deg, rgba(255, 255, 255, 0) -8.55%, rgba(255, 255, 255, 0.8) 159.35%), #5A54F5;">
+          <div class="col-md-3 col-12 Gray_5 offset-md-2" >
+            <p class="Body_1  mt-5 ">{{ say1[i]['title']  }}</p>
+            <p class="Title_2 ">{{ say1[i]['title2']  }} </p>
+            <p class="Body_1 ">{{ say1[i]['description'] }}</p>
+          </div>
+          <div class="col-md-5 col-12 mt-3 mt-md-0">
+            <img src="/img/home/{{ say1[i]['id'] }}.png" class="img-fluid w-100" alt="{{ say1[i]['title'] }}">
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  <div class = "" style="bottom:7vh; z-index:2">
+    <div class="swiper-pagination"></div>
+  </div>
+  </div>
+
+
+  <section id='partners' style="
+    margin-top: 48vh;">
+
+    <div class='container col-12'>
+      <h5 class='Gray_2 SubTitle_1'>Our Partners </h5>
+      <h3 class='Gray_1 Title_1'>{% block x8 %}CN.AI의 성장과 함께하는 파트너사{% endblock %}</h3>
+    </div>
+
+    <div class="simply-scroll simply-scroll-container" style="margin-top: 16vh">
+      <div class="simply-scroll-clip">
+        <ul id="scrollerTop" class="simply-scroll-list">
+          {% for i in range(1,12) %}
+          <li><img src="/img/home/partnerLogo/1/{{ i }}.png" alt="cnai"></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="simply-scroll simply-scroll-container">
+      <div class="simply-scroll-clip">
+        <ul id="scrollerBottom" class="simply-scroll-list">
+          {% for i in range(12,22) %}
+          <li><img src="/img/home/partnerLogo/2/{{ i }}.png" alt="cnai"></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<video autoplay muted loop id="">
+  <source src="/img/home/2.mov" type="video/mp4">
+</video>
+
+<div class='isBg-1 card rounded-0 border-0'>
+  <video autoplay muted loop id="myVideo2">
+    <source src="/img/home/2.mov" type="video/mp4">
+  </video>
+</div>
+
+
+<!-- <iframe class = 'if1'
+
+src="https://www.youtube.com/embed/ynKqvIBNMBY?playlist=ynKqvIBNMBY&loop=1&autoplay=1"frameborder="0" allowfullscreen title="YouTube video player">
+
+
+</iframe> -->
+
+<div class='isBg bg-Gray6' style="padding-top: 30vh">
+  <section id='news' class='offset-md-2 '>
+    <p class='Title_1 Gray_1' style="margin-top: 36vh; margin-bottom: 8vh;">
+      {% block x9 %} CN.AI의 새로운 소식을 확인하세요! {% endblock %}
+    </p>
+
+    <div id="filters" class="button-group mb-5">
+      <button class="btn-blue-tab is-checked bg-transparent border-0 mx-md-3 mx-0 px-md-3  is-checked px-3"
+        data-filter="*">All</button>
+      <button class="btn-blue-tab bg-transparent border-0 mx-md-3 mx-0 px-md-3 " data-filter=".Investment">Investment</button>
+      <button class="btn-blue-tab bg-transparent border-0 mx-md-3 mx-0 px-md-3 " data-filter=".News">News</button>
+      <button class="btn-blue-tab bg-transparent border-0 mx-md-3 mx-0 px-md-3 " data-filter=".Team">Team</button>
+
+    </div>
+    <!-- data-isotope-options='{ "layoutMode": "masonryHorizontal", "itemSelector": ".element-item", "masonryHorizontal": { "rowHeight": ".grid-sizer" } }' -->
+    <div class='wrapper' id = 'wrapper'>
+      <section class='isotope'>
+        <!-- <div class="grid-sizer"></div> -->
+        {% for i in data %}
+        {% if i.name == 'Team' %}
+        <div class='card border-0 element-item {{ i.name }}' data-category='{{ i.name }}'>
+          <div class='number d-none'>{{ i.order }}</div>
+          <img src="/img/home/team/{{i.content2}}">
+          <div class='card-img-overlay d-flex d-column'>
+            <div class="card-footer bg-transparent border-0 text-white mt-auto">
+              <p class='Label '>{{ i.name }}</p>
+              <p class='Title_3 text-wrap'>{{i.title}}</p>
+            </div>
+          </div>
+        </div>
+
+        {% else %}
+
+        <a href='{{ i.content }}' class='element-item border-0 {{ i.name }} card p-3' data-category='{{ i.name }}'
+          target='_blank'>
+          <p class='Label Gray_1'>{{i.name}}</p>
+          <div class='number d-none'>{{ i.order }}</div>
+          <p class='Title_3 Gray_1 text-wrap'>{{i.title}}</p>
+
+        </a>
+        {% endif %}
+        {% endfor %}
+      </section>
+ 
+    </div>
+    <div class = '' style = 'padding-bottom: 36vh;'>
+    <button id="slideLeft" type="button" class = 'bg-transparent border-0'><img src = '/img/icon/04 arrow-left-circle.png' class = 'btn-sm-1'></button>
+    <button id="slideRight" type="button" class = 'bg-transparent border-0'><img src = '/img/icon/05 arrow-right-circle.png' class = 'btn-sm-1'></button>
+  </div>
+  </section>
+</div>
+
+
+
+{% endblock %}
+
+{% block fB %}mailto:contact@cnai.ai{% endblock %}
+{% block title %}{{ fB }} {% endblock %}
+{% block btn %} CONTACT US {% endblock %}
+
+
+{% block localScript %}
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="//npmcdn.com/isotope-masonry-horizontal@2/masonry-horizontal.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/6.0.0/shuffle.min.js"></script>
+<script>
+    const buttonRight = document.getElementById('slideRight');
+    const buttonLeft = document.getElementById('slideLeft');
+
+    // var targets = document.querySelectorAll(".dis");
+
+    // targets.forEach(target => {
+    //   $(this).fadeOut(1000);
+    // });
+
+
+    buttonRight.onclick = function () {
+      document.getElementById('wrapper').scrollLeft += 1000;
+    };
+    buttonLeft.onclick = function () {
+      document.getElementById('wrapper').scrollLeft -= 1000;
+    };
+
+    $('.dis')
+.transition({
+  animation : 'fade',
+  duration  : 6000,
+  // interval  : 800
+})
+
+// function delay(delayInms) {
+//   return new Promise(resolve => {
+//     setTimeout(() => {
+//       resolve(2);
+//     }, delayInms);
+//   });
+// }
+
+// async function sample() {
+ 
+//   $('.hMove')
+// .transition({
+//   animation : 'fade',
+//   duration  : 2400,
+//   interval  : 800
+// })
+// ;
+//   let delayres = await delay(3000);
+
+// }
+// sample();
+
+
+
+
+
+
+
+
+
+
+  // init Isotope
+
+  function removeElement(target) {
+  target.animate({
+    opacity: "-=1"
+  }, 1000, function() {
+    target.remove();
+  });
+}
+
+
+  var $container = $('.isotope').isotope({
+    itemSelector: '.element-item',
+    layoutMode: 'masonryHorizontal',
+    // layoutMode: 'fitRows',
+    sortBy: 'number',
+
+    sortAscending: true,
+    masonryHorizontal: {
+      // gutter: 10,
+      // horizontalOrder: true,
+      // rowWidth: ,
+      columnWidth: 440,
+    },
+
+    // resizesContainer: false,
+
+    getSortData: {
+      name: '.name',
+      symbol: '.symbol',
+      number: '.number parseInt',
+      category: '[data-category]',
+      weight: function (itemElem) {
+        var weight = $(itemElem).find('.weight').text();
+        return parseFloat(weight.replace(/[\(\)]/g, ''));
+      }
+    }
+  });
+  // var isHorizontal = true;
+  var $window = $(window);
+  // $('.isotope').attr('data-is-horizontal');
+
+  // filter functions
+  var filterFns = {
+    ium: function () {
+      var name = $(this).find('.name').text();
+      return name.match(/ium$/);
+    }
+  };
+
+  // bind filter button click
+  $('#filters').on('click', 'button', function () {
+    var filterValue = $(this).attr('data-filter');
+    // use filterFn if matches value
+    filterValue = filterFns[filterValue] || filterValue;
+    $container.isotope({
+      filter: filterValue
+    });
+  });
+
+  // bind sort button click
+  $('#sorts').on('click', 'button', function () {
+    var sortByValue = $(this).attr('data-sort-by');
+    $container.isotope({
+      sortBy: sortByValue
+    });
+  });
+
+  // change is-checked class on buttons
+  $('.button-group').each(function (i, buttonGroup) {
+    var $buttonGroup = $(buttonGroup);
+    $buttonGroup.on('click', 'button', function () {
+      $buttonGroup.find('.is-checked').removeClass('is-checked');
+      $(this).addClass('is-checked');
+    });
+  });
+
+
+  $("#goDown").click(function () {
+    $('html, body').animate({
+      scrollTop: $("#tech").offset().top - 200
+    },
+      'fast');
+  });
+
+
+
+  // fix menu when passed
+
+
+  var swiper = new Swiper(".mySwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+    
+      clickable: true,
+
+    },
+    effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+
+  scrollPartner = (x,y)=>{
+  $(x).simplyScroll({
+    customClass: "simply-scroll",
+    frameRate: 20,
+    speed: 1,
+    orientation: "horizontal",
+    auto: !0,
+    autoMode: "loop",
+    manualMode: "end",
+    direction: y,
+    startOnLoad: !1,
+    initialOffset: 0,
+    pauseOnHover: false
+  });
+}
+
+scrollPartner('#scrollerTop', 'forwards')
+scrollPartner('#scrollerBottom', 'backwards')
+
+</script>
+
+{% endblock %}

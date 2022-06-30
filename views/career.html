@@ -1,0 +1,588 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- 1회성 -->
+<style>
+  .text-c {
+    font-family: 'Apple SD Gothic Neo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 5.5rem;
+    line-height: 129%;
+    /* or 129% */
+
+
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 56.58%), linear-gradient(270deg, #7E53FF 24.94%, rgba(126, 83, 255, 0) 80.15%), #5A54F5;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .btn-down {
+    transform: rotate(45deg);
+  }
+
+
+
+  .member:hover {
+    top: -2rem;
+  }
+
+  .member {
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+  }
+
+  .btn-up {
+    transform: rotate(-45deg);
+  }
+
+  .btn-sm-member:hover {
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    -ms-transition: -ms-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+  }
+
+  .btn-sm-member:hover,
+  .btn-sm-member-active {
+    transform: rotate(-180deg);
+  }
+
+  /* .swiper {
+    height: 50vh;
+  } */
+
+
+  .w-60 {
+    width: 60vw;
+  }
+
+  .w1 {
+    width: 22vw;
+    height: auto;
+  }
+
+  .q-card {
+    height: 45vh;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    content: "";
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #BDBDBD;
+  }
+
+  .swiper-button-prev {
+    left: 16vw;
+  }
+
+  .swiper-button-next {
+    right: 16vw;
+  }
+
+  /* .m-2:hover > div{
+  opacity: 0.6
+} */
+  .m-2>.card:hover {
+    color: #363D47 !important;
+  }
+
+  .m-font {
+    font-family: 'Apple SD Gothic Neo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 36px;
+    /* or 180% */
+
+    letter-spacing: -0.02em;
+  }
+
+  .w3 {
+    width: 24% !important;
+  }
+
+  .wrapper {
+    width: auto;
+    height: auto;
+  }
+
+  .circle {
+    width: 200px;
+    height: 200px;
+    background: #2ecc71;
+    border-radius: 100px;
+    position: relative;
+    margin: 100px auto 0 auto;
+  }
+
+  .c1 {
+    width: 16rem;
+    height: 16rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%), #5A54F5 !important;
+    border-radius: 8rem;
+  }
+
+  .c2 {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 7.5rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%), #E6E6E6 !important;
+  }
+
+  .c3 {
+    width: 23rem;
+    height: 23rem;
+
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%), #4E5968 !important;
+
+  }
+
+  .c4 {
+    width: 13rem;
+    height: 13rem;
+
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%), #FFFFFF !important;
+
+  }
+
+
+  .circle-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
+
+
+  .v1-down {
+    border-left: 1px dashed #4E5968;
+    transform: rotate(180deg);
+    transform-origin: 0% 100%;
+  }
+
+  .v1-up {
+    border-left: 1px dashed #4E5968;
+    transform: rotate(180deg);
+    transform-origin: 0% 0%;
+  }
+
+  .pBtn {
+    background: linear-gradient(92.14deg, #7E53FF 9.69%, rgba(126, 83, 255, 0) 73.88%), #5A54F5 !important;
+    box-shadow: 0px 0px 40px rgba(52, 79, 255, 0.2), 6px 6px 20px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .c-text-2 {
+    font-family: made-tommy-outline;
+    font-size: 5.93rem;
+  }
+
+  .process {
+    background-color: #F2F5F8;
+  }
+
+  .ui.secondary.pointing.menu .item {
+    border-bottom: 2px solid rgba(90, 84, 245, 0.2);
+  }
+
+  .cCard{
+    height: 54vh;
+  }
+</style>
+
+
+<img src='/img/career/banner.png' class='w-100'>
+
+<a href='https://defiant-sodalite-85a.notion.site/Beta-6dfeaaf6dd024663a7467620ca7dad24' target='_blank'
+  class="ui button shadow-lg pBtn Gray_4" id='shortcut'>
+  {% block x1 %}채용공고 보러가기{% endblock %}
+</a>
+<!-- </div> -->
+
+<section id='banner' class='container masthead'>
+  <div class='row'>
+    <div class='col-8'>
+      <h1 class='text-c'>{% block x2 %} 함께이기에 <br />
+        더 빛이 나는 사람들 {% endblock %},</h1>
+    </div>
+    <div class='col-4 d-flex '>
+      <h1 class='Point_1 mt-auto c-text-2'>CN.TEAMS</h1>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class='isBg' style='background: linear-gradient(180deg, #FFFFFF 0%, #F8F8FF 68.75%, #F0F0FF 100%);' id ='ourValue'>
+
+  <!-- linear-gradient(180deg, rgba(248, 248, 255, 0) 0%, #F8F8FF 64.22%); -->
+  <section class="box d-flex" style="margin-top: 13vh; margin-bottom: 18vh;">
+    <div class="text-center align-self-center mx-auto">
+      <h5 class="SubTitle_1 Gray_2 ">How we work</h5>
+      <h3 class="mt-3 Gray_1 Title_2">{% block x3 %}우리가 성장하는 방식 {% endblock %}</h3>
+    </div>
+  </section>
+
+
+
+  <section class='v-75' id = 'ourTeam'>
+    <!-- Swiper -->
+
+    <div class="swiper career-slide h-100">
+      <div class="swiper-wrapper">
+
+        {% for i in range(1,5) %}
+        <div class="swiper-slide w-60">
+          <div class="card w-100 border-0 rounded-0 ">
+            <img src="/img/career/howWeWork/{{ say1[i]['id'] }}.png" alt="{{ say1[i]['title']   }}" class='card-img member2-img'>
+            <div class="card-img-overlay member{{ loop.index }}-img p-0 rounded-0">
+              <div class='row g-0 h-100'>
+                <div class='col-lg-4 d-flex flex-column p-5 '>
+                  <h5 class="Title_1 Gray_1">{{ say1[i].title | striptags(true) | escape | nl2br}}</h5>
+                  <div class='mt-auto '>
+                    <p class="Title_3 Gray_0  member{{ say1[i]['id'] }} transition hidden">{{ say1[i]['description'] }} </p>
+                  </div>
+                </div>
+                <div class='col align-self-end p-5'>
+                  <button onClick="showUp($(this).attr('id'))" id="member{{ say1[i]['id'] }}"
+                    class="align-say1[i]s-baseline border-0 card-text bg-transparent float-end c-btn member{{ say1[i]['id']}}-btn">
+                    <i class="bi bi-plus-circle text-white fs-1"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+      <!-- <span class= 'prev  '><i class="angle left icon"></i></span>
+      <span class= 'next '><i class="angle right icon"></i></span> -->
+      <div class="swiper-button-next"><i class="angle right icon"></i></div>
+      <div class="swiper-button-prev"><i class="angle left icon"></i></div>
+    </div>
+  </section>
+
+
+
+
+  <section id='teamIntroduction'>
+    <div class='text-center' style='margin-top:30vh; margin-bottom:20vh;'>
+      <span class='team-intro Title_1 Gray_3'>{% block x4 %}<span class='Point_1'>씨</span>앤에이아이 <span class='Point_1'>팀</span>을 <span
+          class='Point_1'>소</span>개합니다!</span>{% endblock %}
+    </div>
+
+    <div class="offset-lg-2">
+      <div class="border-0 ui attached tab segment bg-transparent" data-tab="member-1">
+
+        <div class='my-5 '> <span class="ui large label Body_1_eng text-white align-text-top me-2"
+            style="background: #929AA4; bottom: 1rem;position: relative;">
+            Q1
+          </span><span class='Title_1 Gray_1'>{{ questions[0]}}</span></div>
+
+        <div class="swiper mySwiper1" style="height: inherit;">
+          <div class="swiper-wrapper">
+            {% for s in data %}
+            {% if s.question == 1 %}
+            <div class="swiper-slide w1">
+              <div class="card border-0 mb-3 shadow member mt-5 w-100 p-4 rounded-3 cCard" >
+                <p class="Title_2 ">{%block l1 %}나는 CN.AI의 {% endblock %}<br /><span class='Title_1' style="color: #{{ s.color }} ">
+                  {% block f1 %}{{ s.title  }}{% endblock %}</span></p>
+                <button class=" border-0 bg-transparent btn-sm-member m{{ loop.index }}-btn btn-sm-1"
+                 ' onclick="showUp2($(this).attr('id')) " id="m{{ loop.index }}">   <img src = '/img/icon/07 dropdown.png' class = 'btn-sm-1'></button>
+                <div class="card-body Gray_2 m{{ loop.index }} d-none">
+                  <p class="card-text Body_2 Gray_2">{% block f2 %}{{ s.content | striptags(true) | escape | nl2br}}{% endblock %}</p>
+                </div>
+                <div class="card-footer mt-auto bg-transparent border-0 Gray_1 member-Tab">{%block f3 %}{{ s.writer }}{% endblock %}</div>
+              </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+
+      {% for i in range(2,6) %}
+      <div class="border-0 ui attached tab segment bg-transparent" data-tab="member-{{ i }}">
+
+        <div class='my-5 '> <span class="ui large label Body_1_eng text-white align-text-top me-2"
+            style="background: #929AA4; bottom: 1rem;position: relative;">
+            Q {{ i }}
+          </span><span class='Title_1 Gray_1'>
+            {{ questions[i-1] }}
+          </span></div>
+
+        <div class="swiper mySwiper{{ i }}">
+          <div class="swiper-wrapper">
+            {% for s in data %}
+            {% if s.question == i %}
+
+            <div class="swiper-slide w1">
+              <div class="card border-0 mb-3 shadow member mt-5 w-100 p-4 rounded-3 q-card cCard">
+                <div class="card-body">
+                  <p class="Body_1 Gray_2">{% block ff2 %}{{ s.content | striptags(true) | escape | nl2br }}{% endblock %}</p>
+                </div>
+                <div class="card-footer mt-auto bg-transparent border-0 Gray_1 member-Tab">{% block ff3 %}{{ s.writer }}{% endblock %}</div>
+              </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+      <p style="
+    padding-top: 12vh;
+    position: absolute;
+"><span onclick="showPrev()"><i class="angle left icon"></i></span>
+        <span id="currentPage">1</span> /5 <span id="showNext" onclick="showNext(1)"><i
+            class="angle right icon"></i></span>
+      </p>
+
+      <div class="ui pointing secondary menu border-0" style="
+      padding-bottom: 10vh;
+  ">
+
+        {% for i in range(1,6) %}
+        <a class="item px-md-5 px-3" data-tab="member-{{ i }}" id="member-{{ i }}" onClick='updatePage(this)'></a>
+        {% endfor %}
+      </div>
+
+    </div>
+  </section>
+</section>
+
+
+<section id='welfare' class='container'>
+
+  <div class=' row justify-content-center' style="margin-top: 30vh;">
+    <h5 class='Gray_2 SubTitle_1 text-center'>Our Welfare
+    </h5>
+    <h4 class='col-md-6 Title_2 Gray_1 text-center' style ='margin-bottom:14vh;'>{% block x17 %}아낌없는 지원으로 업무 몰입 뿐 아니라, <br />
+      팀원들의 성장과 자아실현까지 이끌어갑니다.{% endblock %}</h4>
+  </div>
+
+  <img class='w-100 my-3' src='/img/career/5.png'>
+
+  <div class='row g-5' style='margin-top: 20vh; margin-bottom: 30vh'>
+    {% for s in data %}
+    {% if s.question == 6 %}
+
+    <div class='col-md-3 offset-lg-1 my-5 py-5' data-aos="fade-up" data-aos-delay="{{ (loop.index-25) * 100 }}">
+      <img src='/img/career/{{ s.color }}.svg' alt='{{ s.title }} ' class='col-md-2'>
+      <h4 class='mt-3 Gray_1 Title_3'>{% block f4 %}{{ s.title }}{% endblock %}</h4>
+      <h5 class='Body_1' style='color:#7E7E7E; '>{% block f5 %}{{ s.content }}{% endblock %}</h5>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+
+  </div>
+</section>
+
+<section class='process'>
+  <!-- height: 150vh; -->
+  <div style='margin-bottom: 6rem; padding-top:12vh '>
+    <h1 class='text-center Title_1 Gray_1'>{% block x5 %}영입 절차{% endblock %} </h1>
+    <p class='text-center Point_1 Body_1'>{% block x6 %}지원 후 2주 내 최종 발표 진행{% endblock %}</p>
+  </div>
+
+  <div class='row'>
+    <div class='col-md-2 d-none d-md-block Body_1 Gray_0' style='position:absolute' id='c2-text'>
+      {% block x10 %}지원자의 역량을 확인하기 위한
+      인적성 적합도 평가 과정{% endblock %}</div>
+    <div class='col-md-2 Body_1 Gray_0 d-none d-md-block ' style='position:absolute' id='c4-text'>
+      {% block x14 %}3개월간의 수습 기간 동안
+      적합도 평가를 통해 정직원 전환 진행{% endblock %}</div>
+  </div>
+
+  <div class="row justify-content-center  my-4 py-5">
+
+    <div class="ui circular segment position-relative border-0 my-auto  c1 border-0 position-relative">
+      <div class="circle-text text-white">
+        <p class="label mb-2"> 01</p>
+        <div class="col-md-3 mx-auto mb-3" style="border-bottom: 2px solid white"></div>
+        <p class="Title_3">{% block x7 %}서류 평가{% endblock %} </p>
+      </div>
+      <div class="d-flex position-absolute bottom-0 start-50 translate-middle-x">
+        <div class="v1-down mx-auto" style='height: 9.3rem;'></div>
+      </div>
+
+    </div>
+
+
+    <div class="ui circular segment position-relative border-0 my-auto c2">
+      <div class='circle-text Gray_1'>
+        <p class='label mb-2'> 02</p>
+        <div class="col-md-3 mx-auto mb-3" style="border-bottom: 2px solid #4E5968"></div>
+        <p class='Title_3'>{% block x9 %}인적성 검사{% endblock %} </p>
+      </div>
+      <div class="d-flex position-absolute top-0 start-50 translate-middle-x">
+        <div class="v1-up mx-auto" style='height: 9.3rem;'></div>
+      </div>
+    </div>
+
+    <div class='ui circular segment position-relative border-0 my-auto c3'>
+      <div class='circle-text text-white'>
+        <p class='label'> 03</p>
+        <div class="col-md-3 mx-auto mb-3" style="border-bottom: 2px solid white"></div>
+        <p class='Title_3'>{% block x11 %}역량 / 문화 <br />
+          인터뷰{% endblock %}</p>
+      </div>
+      <div class="d-flex position-absolute bottom-0 start-50 translate-middle-x">
+        <div class="v1-down mx-auto" style='height: 7rem;'></div>
+      </div>
+
+    </div>
+
+    <div class="ui circular segment position-relative border-0 my-auto c4" id='c4'>
+      <div class='circle-text Gray_1'>
+        <p class='label'> 04</p>
+        <div class="col-md-3 mx-auto mb-3" style="border-bottom: 2px solid #4E5968"></div>
+        <p class='Title_3'>{% block x13 %}정직원 채용{% endblock %} </p>
+      </div>
+      <div class="position-absolute top-0 start-50 translate-middle-x">
+        <div class="v1-up mx-auto" style='height: 10rem;'></div>
+      </div>
+    </div>
+
+    <div class='row mt-4'>
+      <div class='col-md-2 Body_1 Gray_0 d-none d-md-block ' style='position:absolute' id='c1-text'>{% block x8 %}실무진들의 면밀한 검토를
+        통한 서류 평가 과정{% endblock %} </div>
+      <div class='col-md-3 Body_1 Gray_0 mt-4 d-none d-md-block ' style='position:absolute' id='c3-text'>{% block x12 %}역량, 컬쳐핏이 CN과
+        부합하는지 알아보기 위한 역량/문화 인터뷰{% endblock %}</div>
+    </div>
+
+  </div>
+
+
+  <div class='container' style="padding-top: 23vh; padding-bottom: 23vh;" id = 'navi-2'>
+    <div class='col'>
+      <span class="ui huge label bg-white Gray_1 mx-2">
+        {% block x15 %}채용 문의{% endblock %}
+      </span>
+      <a href='mailto:hr_team@cnai.ai' class='Gray_0'>hr_team@cnai.ai</a>
+      <a href='mailto:hr_team@cnai.ai' class='Gray_2'>문의하기 <img src = '/img/icon/10 more-right-small_gray4.png' class = 'btn-sm-24'> </a>
+    </div>
+  </div>
+
+
+</section>
+
+
+{% endblock %}
+{% block title %}CNAI의 개발팀의 일상 엿보기 {% endblock %}
+{% block fB %}{% endblock %}
+{% block btn %} Tech Blog 바로가기 {% endblock %}
+
+{% block localScript %}
+<script>
+document.getElementById('btn-career').style = 'display:none;'
+  makeSwiper = (className) => {
+    new Swiper(className, {
+      slidesPerView: 2,
+      // centeredSlides: true,
+      spaceBetween: 30,
+      grabCursor: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        }
+      }
+    });
+  }
+
+  let swiper1 = makeSwiper(".mySwiper1")
+  let swiper2 = makeSwiper(".mySwiper2")
+  let swiper3 = makeSwiper(".mySwiper3")
+  let swiper4 = makeSwiper(".mySwiper4")
+  let swiper5 = makeSwiper(".mySwiper5")
+
+  $('.menu .item')
+    .tab()
+    ;
+
+  showUp2 = (myId) => {
+    let memberBtn = myId + '-btn'
+    document.getElementsByClassName(myId)[0].classList.toggle("d-none");
+    document.getElementsByClassName(memberBtn)[0].classList.toggle("btn-sm-member-active");
+  }
+
+  var swiper = new Swiper(".career-slide", {
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    spaceBetween: 90,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    initialSlide: 1,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    }
+  });
+
+  updatePage = (item) => {
+    document.getElementById('currentPage').innerHTML = item.dataset.tab.substr(7, 1);
+  }
+
+  showNext = (num) => {
+    cPage = Number(document.getElementById('currentPage').innerHTML) + 1 * (num)
+    id = 'member-' + cPage;
+    current = 'member-' + Number(document.getElementById('currentPage').innerHTML);
+    $('.tab[data-tab]')[cPage - 2 * num].classList.remove('active')
+
+    $('.tab[data-tab]')[cPage - 1 * num].classList.add('active')
+
+    document.getElementById(current).classList.remove('active');
+    document.getElementById(id).classList.add('active');
+
+    document.getElementById('currentPage').innerHTML = cPage;
+  }
+
+
+  showPrev = () => {
+    cPage = Number(document.getElementById('currentPage').innerHTML) - 1
+    id = 'member-' + cPage;
+    current = 'member-' + Number(document.getElementById('currentPage').innerHTML);
+    $('.tab[data-tab]')[cPage - 1].classList.add('active')
+    $('.tab[data-tab]')[cPage].classList.remove('active')
+
+    document.getElementById(current).classList.remove('active');
+    document.getElementById(id).classList.add('active');
+
+    document.getElementById('currentPage').innerHTML = cPage;
+  }
+
+
+  processPos = (myClass) => {
+    let target = document.getElementsByClassName(myClass)[0]
+    let targetText = myClass + '-text'
+    document.getElementById(targetText).style.marginLeft = (target.getBoundingClientRect().width / 2 + target.getBoundingClientRect().x + 10) + "px";
+    // console.log(myClass, 'completed')
+  }
+
+  processPos('c1');
+  processPos('c2');
+  processPos('c3');
+  processPos('c4');
+
+
+
+</script>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="bgGray1 w-100 card p-5" style="height: 80vh">
+    <div class="card-footer mt-auto container bg-transparent border-0">
+        <p class="Gray_5 Title_1">전자증권 전환대상 주권 등의 권리자 보호 안내</p>
+        <p class="Gray_2 SubTitle_1">2022.04.05</p>
+    </div>
+</section>
+<div class = 'container'>
+<section class = 'col-md-7 col-12 offset-md-3 p-5'>
+    <div class = 'lh-lg'>
+    {% for i in data %}
+{{i.content  | striptags(true) | escape | nl2br  }}
+{% endfor %}
+    </div>
+<hr>
+</section>
+</div>
+
+
+{% endblock %}
+
+{% block localScript %}
+<script>
+document.getElementById('btn-career').classList.add('d-none')
+</script>
+{% endblock %}
