@@ -209,6 +209,10 @@ app.get('/test', (req,res) => {
 })
 
 
+app.get('/tech', (req,res) => {
+  res.render('tech', {title: '핵심 기술-', say1: JSON.parse(JSON.stringify(career['say1Ko']))});
+})
+
 
 // en
 
@@ -285,6 +289,26 @@ let company = {
   description: "업무용 최신 장비 지원 및 세미나, 도서 구입 등 자기개발비 지원" } ,
   3: {title: "식대 및 차대 제공 ",description: "점심식사와 커피 한잔은 물론, 간식과 야근식대까지 든든하게 보장"},
   4: {title: "리프레쉬 휴가(3, 5, 7주년)",description: "회사의 성장을 이끌어준 팀원들을 위해 리프레시 휴가 지급(2주)"}},
+
+  say1En:{1: { title: "Support for in-house club activities",
+  description: "In-house clubs to enjoy with colleagues such as golf, cycling, futsal, and climbing" },
+  2: { title: "Support for engagement and employee competency development",
+  description: "Support for the latest business equipment and self-development expenses such as seminars and book purchases" } ,
+  3: {title: "Food/Transporation Support",description: "Support for lunch and a cup of coffee, as well as snacks and overtime meal"},
+  4: {title: "Refresh vacation (3, 5, 7th Anniversary)",description: "Refresh vacation for team members who contributed to the company's growth (2 weeks)"}}
+
+}
+
+let tech = {
+  say1Ko:{1: { title: "01",
+  description: "CN.AI의 학습 데이터, 데이터셋이 지속적으로 업데이트됩니다." },
+  2: { title: "02",
+  description: "합성 데이터 생성 및 제공과, 다양한 데이터 연결이 가능합니다." } ,
+  3: {title: "03",description: "보유하고 있는 민감한 데이터가 외부로 유출되지 않습니다."},
+  4: {title: "01",description: "CN.AI의 학습 데이터, 데이터셋이 지속적으로 업데이트됩니다."},
+  5: {title: "02",description: "합성 데이터 생성 및 제공과, 다양한 데이터 연결이 가능합니다."},
+  6: {title: "03",description: "서버 구축하는 비용을 절감하여효율적인 운용이 가능합니다."},
+},
 
   say1En:{1: { title: "Support for in-house club activities",
   description: "In-house clubs to enjoy with colleagues such as golf, cycling, futsal, and climbing" },

@@ -30,7 +30,20 @@
               </li>
   
               <li class="nav-item my-auto Gray_{{ e }} d-block d-md-none mobileMenu">
-                 <a class = 'goEng' href = '/'>KO</a> | <a class = 'goEng' href = '/en/'> EN </a>
+                 <a class = 'goEng Gray_{{ dd }}' href = '/'>KO</a> | <a class = 'goEng Gray_{{ dd }}' href = '/en/'> EN </a>
+              </li>
+
+              <li class="ui compact menu nav-item my-auto  h-100 ms-4 d-none d-md-block {{ a }} " style="background: none;">
+                <div class="ui simple dropdown item Gray_{{ e }} en d-none d-md-block lineOn{{ dd}}Dropdown" id="moveArrow" tabindex="0">
+                  CORE TECH
+                  <i class="angle down icon" id="myArrow"></i>
+                  <div class="menu {{ b }}" tabindex="-1">
+                    <a class="item goEng" href="/tech#warehouse">Data Warehouse</a>
+                    <a class="item goEng" href="/tech#data">Synthetic data </a>
+                   <a class="item d-none goEng" href="/community">Product
+                      <i class="external alternate icon"></i></a>
+                  </div>
+                </div>
               </li>
 
               <li class="ui compact menu nav-item my-auto  h-100 ms-4 d-none d-md-block {{ a }} " style="background: none;">
@@ -44,6 +57,7 @@
                   </div>
                 </div>
               </li>
+
               <div class="ui compact menu nav-item ms-3 my-auto h-100  d-none d-md-block {{a}}" style="background: none;">
                 <div class="ui simple dropdown item Gray_{{ e }} en text-uppercase lineOn{{ dd }}Dropdown" id="moveArrow" tabindex="0">
                   career
