@@ -210,7 +210,7 @@ app.get('/test', (req,res) => {
 
 
 app.get('/tech', (req,res) => {
-  res.render('tech', {title: '핵심 기술-', say1: JSON.parse(JSON.stringify(career['say1Ko']))});
+  res.render('tech', {title: '핵심 기술-', say1: JSON.parse(JSON.stringify(tech['say1Ko']))});
 })
 
 
