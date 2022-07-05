@@ -1,28 +1,30 @@
-  {% macro myHeader(a1 = 'navicon',aa = 'shadow-sm transition hidden ui top fixed menu', bb = 'header_light', cc = "style='position: absolute;height: 100%;top: 2vh;'", dd= '2', ee = 'blue', e = '0' , a = 'border-0 shadow-none', b = '', c = 'dark') %}
+  {% macro myHeader(z1 = 'bg-Gray6', a1 = 'navicon',aa = 'shadow-sm transition hidden ui top fixed menu', bb = 'header_light', cc = "style='position: absolute;height: 100%;top: 2vh;'", dd= '2', ee = 'blue', e = '0' , a = 'border-0 shadow-none', b = '', c = 'dark') %}
 
 <nav class="navbar navbar-expand-lg  py-0 {{ aa }} " id="{{ bb }}"  >
-        <div class="container h-100 mobileNav">
+        <div class="container h-100 mobileNav px-2">
           <a class="navbar-toggler border-0 " type="button" data-bs-toggle="collapse" data-bs-target="#gnb" aria-controls="gnb"
             aria-expanded="false" aria-label="Toggle navigation" {{ cc }}>
-            <img src = '/img/icon/08 hamburger.png' id = 'bars{{ dd }} ' class = "{{ a1 }}">
-        <img src = '/img/icon/09 back.png' id = 'back{{ dd }}' class = 'navicon d-none'>
+            <img src = '/img/icon/08 hamburger.png' id = 'bars{{ dd }}' class = "{{ a1 }}" click = "burgerAction('#bars{{ dd }}','#back{{ dd }}')">
+          <img src = '/img/icon/09 back.png' id = 'back{{ dd }}' class = 'navicon d-none' onclick = "burgerAction('#back{{ dd }}','#bars{{ dd }}')">
         </a>
-          <a class="navbar-brand mx-auto mb-2 me-md-5 goEng" href="/"> <img class="" src="/img/common/CNAI({{ ee }}).png" width="80px"></a>       
+          <a class="navbar-brand mx-auto mb-2 me-md-5 goEng" href="/" style = 'margin-left:21% !important'> <img class="" src="/img/common/CNAI({{ ee }}).png" width="80px"></a>       
           <div class="collapse navbar-collapse" id="gnb">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 Body_2_eng h-100">
               <li class="nav-item  my-auto lineOn{{dd}}  text-center ms-3 d-none d-md-block">
                 <a class="nav-link text-uppercase Gray_{{e}} h-100 py-0 goEng" href="/company">company</a>
               </li>
-              <li class="nav-item  my-auto h-100 d-block d-md-none px-3 py-2 position-relative navTopLine" >
+              <li class="nav-item  my-auto h-100 d-block d-md-none px-3 py-2 position-relative navTopLine {{ z1 }}" >
                 <a class=" text-uppercase Gray_{{e}} position-absolute top-50 start-2 translate-middle-y" href="mailto:contact@cnai.ai">CN.AI MLOps 도입 문의는</a>
                 <a href= 'mailto:contact@cnai.ai'class="nav-item mini ui button me-2 Gray_{{e}} gnbBtn float-end mobileMenu " style="background-color: #938FF8;" id="">CONTACT US</a>
               </li>
               <li class="nav-item my-auto ">
                 <a class="nav-link text-uppercase Gray_{{e}} h-100 d-block d-md-none mobileMenu goEng" href="/company">company</a>
               </li>
+                   <li class="nav-item my-auto ">
+                <a class="nav-link text-uppercase Gray_{{e}} h-100 d-block d-md-none mobileMenu goEng" href="/tech">CORE TECH</a>
+              </li>
               <li class="nav-item my-auto nav-scroller">
-                <a class="nav-link text-uppercase Gray_{{e}} h-100 d-block d-md-none mobileMenu goEng" href="/community">community</a>
-         
+                <a class="nav-link text-uppercase Gray_{{e}} h-100 d-block d-md-none mobileMenu goEng" href="/community">community</a>         
               </li>
   
               <li class="nav-item my-auto ">
