@@ -213,6 +213,9 @@ app.get('/tech', (req,res) => {
   res.render('tech', {title: '핵심 기술-', say1: JSON.parse(JSON.stringify(tech['say1Ko']))});
 })
 
+app.get('/data', (req,res) => {
+  res.render('data', {title: '합성 데이터-', say1: JSON.parse(JSON.stringify(Synthetic['say1Ko']))});
+})
 
 // en
 
@@ -318,6 +321,26 @@ let tech = {
   4: {title: "Refresh vacation (3, 5, 7th Anniversary)",description: "Refresh vacation for team members who contributed to the company's growth (2 weeks)"}}
 
 }
+
+
+
+let Synthetic = {
+  say1Ko:{1: { num: "01", title: '데이터 수집 비용과 시간을 획기적으로 줄입니다.',
+  description: "합성 데이터를 생성하는 플랫폼을 통해, 이미지 전처리 작업에 소요되는 시간을 3배 이상 단축시킬 수 있습니다." },
+  2: { num: "02", title: '개인 정보 관련 문제가 없습니다. ', description: "개인정보 이슈로 인해 데이터 수집이 어려운 의료 분야 등, 다양한 산업에 도입할 수 있습니다." } ,
+  3: {num: "03",title: 'Real Data에 존재하는 편향 문제를 쉽게 해결할 수 있습니다.',description: "Real Data엔 드물게 존재하는 편향된 데이터를 AI학습에 의도적으로 포함할 수 있습니다."},
+
+},
+
+  say1En:{1: { title: "Support for in-house club activities",
+  description: "In-house clubs to enjoy with colleagues such as golf, cycling, futsal, and climbing" },
+  2: { title: "Support for engagement and employee competency development",
+  description: "Support for the latest business equipment and self-development expenses such as seminars and book purchases" } ,
+  3: {title: "Food/Transporation Support",description: "Support for lunch and a cup of coffee, as well as snacks and overtime meal"},
+  4: {title: "Refresh vacation (3, 5, 7th Anniversary)",description: "Refresh vacation for team members who contributed to the company's growth (2 weeks)"}}
+
+}
+
 
 
 app.get("/en/career", (req, res) => {

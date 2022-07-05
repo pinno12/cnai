@@ -20,8 +20,11 @@
               <li class="nav-item my-auto ">
                 <a class="nav-link text-uppercase Gray_{{e}} h-100 d-block d-md-none mobileMenu goEng" href="/company">company</a>
               </li>
-                   <li class="nav-item my-auto ">
+              <li class="nav-item my-auto ">
                 <a class="nav-link text-uppercase Gray_{{e}} h-100 d-block d-md-none mobileMenu goEng" href="/tech">CORE TECH</a>
+              </li>
+              <li class="nav-item my-auto ">
+                <a class="nav-link text-uppercase Gray_{{e}} h-100 d-block d-md-none mobileMenu goEng" href="/data">Synthetic Data</a>
               </li>
               <li class="nav-item my-auto nav-scroller">
                 <a class="nav-link text-uppercase Gray_{{e}} h-100 d-block d-md-none mobileMenu goEng" href="/community">community</a>         
@@ -41,7 +44,7 @@
                   <i class="angle down icon" id="myArrow"></i>
                   <div class="menu {{ b }}" tabindex="-1">
                     <a class="item goEng" href="/tech#warehouse">Data Warehouse</a>
-                    <a class="item goEng" href="/tech#data">Synthetic data </a>
+                    <a class="item goEng" href="/data">Synthetic data </a>
                    <a class="item d-none goEng" href="/community">Product
                       <i class="external alternate icon"></i></a>
                   </div>
@@ -66,7 +69,7 @@
                   <i class="angle down icon" id="myArrow"></i>
                   <div class="menu {{ b }}" tabindex="-1">
                     <a class="item goEng" href="/career">CN.AI Team</a>
-                    <a class="item goEng" href="https://bit.ly/cnaijob">Recruit<i class="external alternate icon"></i></a>
+                    <a class="item goEng" target = '_blank' href="https://defiant-sodalite-85a.notion.site/Beta-6dfeaaf6dd024663a7467620ca7dad24">Recruit<i class="external alternate icon"></i></a>
                   </div>
                 </div>
               </div>

@@ -7,7 +7,7 @@ console.log(`Welcome to
 ┃┃╱╭┫┃╰╮┃┃╰━╯┃┃┃
 ┃╰━╯┃┃╱┃┃┃╭━╮┣┫┣╮
 ╰━━━┻╯╱╰━┻╯╱╰┻━━╯
-You can check job openings at https://bit.ly/cnaijob`)
+You can check job openings at https://defiant-sodalite-85a.notion.site/Beta-6dfeaaf6dd024663a7467620ca7dad24`)
 
 if (window.location.href.search('/en')>0){
   document.getElementById("enFooter").innerHTML = `

@@ -1,0 +1,281 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="card bg-transparent border-0 rounded-0 masthead" id='warehouse'>
+    <img src="/img/3/1.png">
+    <div class="card-img-overlay mx-auto">
+      <section class="py-5 text-center container-fluid mb-5 text-light h-auto">
+        <div class='Title_1' style="margin-top: 40vh;" data-aos="fade-up">
+          {% block x1 %}CN.AI Data Warehouse{% endblock %}
+        </div>
+  
+        <div class="rounded-1 shadow-lg Title_1 Gray_1 col-7  p-5" style="backdrop-filter: blur(14px);background: rgba(255, 255, 255, 0.2);margin-left: auto;bottom: 0;position: absolute;margin-right: auto;right: 0;left: 0;">
+            Better AI를 위한 데이터 합성 솔루션 <br>
+          <br>
+          empowers super-realistic, 
+          biologically-meaningful synthetic data.
+        </div>
+      </section>
+      
+    </div>
+  </section>
+
+
+  <div class="text-center" style="margin-top:9vh">
+    <a id="" href="#tech" class="border-0 bg-transparent mb-5 fs-1 text-gray"><img src="/img/icon/06 arrow-down.png" alt="ArrowCNAI" class="btn-sm-1"></a>
+  </div>
+  
+  <div class="row" id="tech" style="margin-top: 26vh;">
+    <div class="text-center Gray_2 SubTitle_1 pb-5 mb-5" id="down">Our Technology </div>
+  </div>
+  
+  <p class="" style="
+  font-family: 'MADE TOMMY';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 56px;
+  /* identical to box height, or 93% */
+  
+  text-align: center;
+  
+  background: linear-gradient(90deg, #5A54F5 22.03%, rgba(230, 85, 213, 0.8) 57.36%, rgba(251, 118, 118, 0.4) 82.46%), #FFFFFF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;">Synthetic Data
+  </p>
+
+  <img src="/img/3.1/7.png">
+
+  <div class="card rounded-0 border-0">
+    <section class='card-img' style='
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, rgba(107, 231, 231, 0) 0%, rgba(107, 231, 231, 0.2) 100%), linear-gradient(270deg, rgba(126, 83, 255, 0) 0%, #683DEB 103.49%), linear-gradient(180deg, rgba(255, 255, 255, 0) 82.97%, #FFFFFF 95.16%, #FFFFFF 109.27%), linear-gradient(147.1deg, rgba(126, 83, 255, 0.2) 5.67%, rgba(126, 83, 255, 0) 52.89%), #F8F8FF; height: 170vh'></section>
+  
+    <div class="card-img-overlay p-0">
+        <section class = 'offset-md-2'>
+<p class = 'Title_2 my-5'>데이터 공급이 어려웠던 다양한 분야에
+    AI를 위한 고품질의 데이터를 무한 공급할 수 있습니다.</p>
+    
+    <div class="swiper mySwiper mb-3" style="height: 68vh;" >
+        <div class="swiper-wrapper">
+            {% for i in range(1,4) %}
+        
+
+          <div class="swiper-slide ">
+            <div class="card border-0 shadow member mt-5 w-100 p-4 ">
+              <div class="card-body">
+                <p class="Title_1_eng t-blue300">{{ say1[i]['num'] }}</p>
+                <p class="Title_1 Gray_1">{{ say1[i]['title'] }}</p>
+              </div>
+              <div class="card-footer mt-auto bg-transparent border-0 Gray_0 Body_1">{{ say1[i]['description'] }}</div>
+            </div>
+          </div>
+      
+          {% endfor %}
+
+          
+          <div class="swiper-slide" >
+            <div class="card border-0 shadow member mt-5 w-100 p-4 " style="background: radial-gradient(85% 313.07% at -15.22% 82.59%, rgba(255, 251, 251, 0) 0%, rgba(251, 118, 118, 0.2) 15.14%, rgba(207, 57, 220, 0.6) 37.38%, #5A54F5 84.78%), #FFFFFF;
+            box-shadow: 0px 14px 24px rgba(0, 0, 0, 0.1);">
+              
+              <div class="card-footer mt-auto bg-transparent border-0 Gray_0 Body_1">CN.AI의 합성데이터 <br />
+                솔루션이 궁금하다면</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class = 'container'>
+        <button id="" type="button" class = 'journeyPrev bg-transparent border-0'><img src = '/img/icon/04 arrow-left-circle.png' class = 'btn-sm-1'></button>
+        <button id="" type="button" class = 'journeyNext bg-transparent border-0'><img src = '/img/icon/05 arrow-right-circle.png' class = 'btn-sm-1'></button>
+      </div>
+
+    </section>
+      
+    <p class='text-center Gray_3 SubTitle_1 mb-5' style=  'margin-top: 35vh;'>
+        How it work
+      </p>
+    </div>
+</div>
+
+
+
+<div class="swiper workSwiper" style="
+height: 70vh;
+">
+<div class="swiper-wrapper">      
+
+<div class="swiper-slide ">
+<div class="row gx-0 justify-content-between" >
+  <div class="col-md-6 col-12 Gray_5 offset-md-2 text-white" >
+    <p class = 'Title_1'>합성 데이터를 만들어 내는 GAN</p>
+    <p class = 'Body_1'>(Generative Adversarial Network, 적대적생성신경망)</p>
+  </div>
+  <div class="col-md-3 col-12 Gray_5 offset-md-2 text-white" >
+    <p class = 'Title_1' style="font-size:6rem;">Adaptation</p>
+    <p class = 'Body_1'>실제 데이터의 분포에 맞는 합성 데이터를 생성하여, 
+        AI가 가질 수 있는 편향이 생기지 않도록 합니다. </p>
+  </div>
+</div>
+</div>
+
+</div>
+<div class = "" style="bottom:7vh; z-index:2">
+<div class="swiper-pagination"></div>
+</div>
+</div>
+
+
+
+<section class = 'bgGray0'>
+
+    <div class = 'text-center' style='padding-top: 36vh;'>
+    <p class = 'Gray_3 SubTitle_1'>Our Use Cases</p>
+    <p class = 'text-white Title_1_eng my-5 pb-5'>Medical 의료 분야</p>
+</div>
+
+<div class = 'container'>
+<div class = 'row g-5'>
+    <div class="col-12">
+        <div class="card rounded-0 border-0 text-white">
+            <img src="/img/3.1/7.png" class="" alt="...">
+            <div class="card-img-overlay d-flex flex-column p-5">
+                <div class="card-body"></div>
+             
+              <div class="mt-auto Title_1 text-white mt-auto">비임상 병리 데이터</div>
+            </div>
+          </div>
+    </div>
+    <div class ='col-6'>
+        <div class="card rounded-0 border-0 text-white">
+            <img src="/img/3.1/7.png" class="" alt="...">
+            <div class="card-img-overlay d-flex flex-column p-5">
+                <div class="card-body"></div>             
+              <div class="mt-auto Title_1 text-white mt-auto">X-ray 데이터 생성</div>
+            </div>
+          </div>
+
+    </div>
+
+    <div class ='col-6'>
+        <div class="card rounded-0 border-0 text-white">
+            <img src="/img/3.1/7.png" class="" alt="...">
+            <div class="card-img-overlay d-flex flex-column p-5">
+                <div class="card-body"></div>             
+              <div class="mt-auto Title_1 text-white mt-auto">위암 영상의료 데이터 생성</div>
+            </div>
+          </div>
+
+    </div>  
+</div>
+
+
+<p class = 'text-center Title_1_eng pb-5 text-white' style="margin-top:36vh ;">
+    IT Industry 산업 분야
+</p>
+<div class = 'row g-5'>
+    <div class="col-12">
+        <div class="card rounded-0 border-0 text-white">
+            <img src="/img/3.1/8.png" class="" alt="...">
+            <div class="card-img-overlay d-flex flex-column p-5">
+                <div class="card-body"></div>
+             
+              <div class="mt-auto Title_1 text-white mt-auto">AI Human</div>
+            </div>
+          </div>
+    </div>
+    <div class ='col-6'>
+        <div class="card rounded-0 border-0 text-white">
+            <img src="/img/3.1/7.png" class="" alt="...">
+            <div class="card-img-overlay d-flex flex-column p-5">
+                <div class="card-body"></div>             
+              <div class="mt-auto Title_1 text-white mt-auto">Deepfake</div>
+            </div>
+          </div>
+
+    </div>
+
+    <div class ='col-6'>
+        <div class="card rounded-0 border-0 text-white">
+            <img src="/img/3.1/10.png" class="" alt="Inpainting">
+            <div class="card-img-overlay d-flex flex-column p-5">
+                <div class="card-body"></div>             
+              <div class="mt-auto Title_1 text-white mt-auto">Inpainting</div>
+            </div>
+          </div>
+
+    </div>  
+</div>
+
+<div style = 'padding-bottom: 36vh;'>
+<p class = 'text-center Title_1_eng pb-5 text-white' style="margin-top:36vh ;">
+    Automotive 자율주행
+</p>
+
+<div class="card rounded-0 border-0 text-white" >
+    <img src="/img/3.1/11.png" class="" alt="Tesla" >
+    <div class="card-img-overlay d-flex flex-column p-5" >
+        <div class="card-body"></div>     
+      <div class="mt-auto Title_1 text-white mt-auto">자율 주행 데이터 생성</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+</section>
+
+  
+
+
+{% endblock %}
+
+{% block fB %}mailto:contact@cnai.ai{% endblock %}
+{% block title %}CN.AI의 솔루션에 대한 상담이 필요하다면{% endblock %}
+{% block btn %} CONTACT US {% endblock %}
+
+
+{% block localScript %}
+
+<script>
+
+
+var swiper = new Swiper(".workSwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+    
+      clickable: true,
+
+    },
+    effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+    var swiper = new Swiper(".mySwiper", {
+  
+      slidesPerView: 1,
+      spaceBetween: 20,
+      // centeredSlides: true,
+      navigation: {
+        prevEl: ".journeyPrev",
+        nextEl: ".journeyNext"
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        }
+      }
+    });
+  </script>
+  
+
+{% endblock %}
