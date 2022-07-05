@@ -2,15 +2,7 @@
   width: 100%;
   height: 100%;
 }
-.navicon, .naviconDark{
-  position: absolute;
-  /* height: 100%; */
-  top: -2vh; 
-}
 
-.naviconDark{
-  top:-1vh !important;
-}
 
 .navTopLine{
  border-top: 1px solid #EEEEEE; 
@@ -37,6 +29,10 @@
 
   .mHome{
    height: auto !important; 
+  }
+
+  .tech-1{
+    width: 100% !important;
   }
   /* #shortcut{
  right:34vw;
@@ -454,7 +450,7 @@ padding-left: 1rem; */
   color: #363D47;
 }
 
-.Gray_1 {
+.Gray_1,gray1 {
   color: #4E5968 !important;
 }
 
@@ -464,12 +460,12 @@ padding-left: 1rem; */
 
 }
 
-.gray1 {
+/* . {
   color: #4E5968
-}
+} */
 
 .bgGray1{
-  background-color: #4E5968 ;
+  background-color: #4E5968 !important;
 }
 
 

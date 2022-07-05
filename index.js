@@ -307,7 +307,7 @@ let tech = {
   3: {title: "03",description: "보유하고 있는 민감한 데이터가 외부로 유출되지 않습니다."},
   4: {title: "01",description: "CN.AI의 학습 데이터, 데이터셋이 지속적으로 업데이트됩니다."},
   5: {title: "02",description: "합성 데이터 생성 및 제공과, 다양한 데이터 연결이 가능합니다."},
-  6: {title: "03",description: "서버 구축하는 비용을 절감하여효율적인 운용이 가능합니다."},
+  6: {title: "03",description: "서버 구축하는 비용을 절감하여 효율적인 운용이 가능합니다."},
 },
 
   say1En:{1: { title: "Support for in-house club activities",

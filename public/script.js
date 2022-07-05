@@ -64,19 +64,20 @@ showUp = (myId, category) => {
 // });
 
 burgerAction = (x,y)=>{
-  $(x).click(function(){
-    $(this).addClass('d-none');
+ 
+   
+    $(x).addClass('d-none');
+    console.log($(this))
     $(y).removeClass('d-none');
-  });
-}
-burgerAction('#bars1','#back1')
-burgerAction('#back1','#bars1')
-burgerAction('#bars2','#back2');burgerAction('#back2','#bars2')
 
-$('#back').click(function(){
-  $(this).addClass('d-none');
-  $('#bars').removeClass('d-none');
-});
+  
+}
+
+// burgerAction('#bars1','#back1')
+// burgerAction('#back1','#bars1')
+// burgerAction('#bars2','#back2');
+// burgerAction('#back2','#bars2')
+
 
 changeColor = (item) =>{
   let id = item.id ;  

@@ -3,14 +3,13 @@
 {% block content %}
 <section class="card bg-transparent border-0 rounded-0 masthead" id='warehouse'>
   <img src="/img/3/1.png">
-  <div class="card-img-overlay">
+  <div class="card-img-overlay mx-auto">
     <section class="py-5 text-center container-fluid mb-5 text-light h-auto">
       <div class='Title_1' style="margin-top: 40vh;" data-aos="fade-up">
         {% block x1 %}CN.AI Data Warehouse{% endblock %}
       </div>
 
-      <div class="rounded-1 shadow-lg Title_1 Gray_1 col-7 mx-auto p-5"
-        style="backdrop-filter: blur(14px);background: rgba(255, 255, 255, 0.2); margin-top: 50vh;">
+      <div class="rounded-1 shadow-lg Title_1 Gray_1 col-7  p-5" style="backdrop-filter: blur(14px);background: rgba(255, 255, 255, 0.2);margin-left: auto;bottom: 0;position: absolute;margin-right: auto;right: 0;left: 0;">
         CN.AI Data Warehouse 플랫폼은
         자동화 된 ML 개발환경과 더불어 합성데이터를 제공하고, <br>
         <br>
@@ -18,22 +17,28 @@
         개방적이고 유연한 확장을 지원합니다.
       </div>
     </section>
+    <a id='' href='#tech' class='border-0 bg-transparent mb-5 fs-1 text-gray'><i class="angle down icon"></i></a>
   </div>
 </section>
-<a id='' href='#tech' class='border-0 bg-transparent mb-5'><i class="angle down icon"></i></a>
-<div class="row" id="">
+
+
+
+
+<div class="row" id="tech" style="margin-top: 26vh;">
   <div class="text-center Gray_2 SubTitle_1 pb-5 mb-5" id="down">Our Technology </div>
 </div>
+
+
+
+
 
 <p class="" style="font-family: 'MADE TOMMY';
   font-style: normal;
   font-weight: 500;
-  font-size: 60px;
-  line-height: 56px;
-  /* identical to box height, or 93% */
+  font-size: 4rem;
+
   
-  text-align: center;
-  
+  text-align: center;  
   background: linear-gradient(92.05deg, rgba(96, 255, 217, 0.8) 22.66%, rgba(50, 255, 206, 0) 86.02%), linear-gradient(0deg, rgba(90, 84, 245, 0.8), rgba(90, 84, 245, 0.8)), #F2F5F8;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -48,190 +53,202 @@
   opacity: 0.3; height: 240vh'></section>
 
   <div class="card-img-overlay p-0">
+    
+    <div class = 'text-center'>
+    <p class='ui button bgGray1 text-white SubTitle_1 text-center' id = '' style = 'margin-top:26vh;' >Train & Release Pipleline</p>
+  </div>
+    <div class='row offset-md-2 my-5 py-5'>
+      <img src='/img/3/3.png' alt='도너츠' class='w-75 mb-md-5 p-md-5 p-0 tech-1'>
+    </div>
 
+    <div class="swiper techSwiper" style="height:68vh" ;>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class='row offset-md-2'>
+            <div class='col-md col-12'>
 
-    <div class = 'row offset-md-2'>
-<img src='/img/3/3.png' alt='mlops' class='w-75 mb-5 p-5'>
-</div>
-
-  <div class="swiper techSwiper" style="height:68vh";>
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class='row offset-md-2' >
-          <div class='col'>
-
-            <div class="card border-0 shadow-sm h-100">
-              <div class="card-body p-5">
-                <p class='Gray_1 Title_1_eng'>
-                  On-Premises 설치형 서비스
-                </p>
-                <div class='row g-5'>
-                  {% for i in range(1,4) %}
-                  <div class='col-5'>
-                    <p class='t-blue300 Title_1_eng mb-0'>{{ say1[i]['title'] }}</p>
-                    <p class='Gray_0 Body_1 col-8'>
-                      {{ say1[i]['description'] }}
-                    </p>
-                  </div>
-                  {% endfor %}
-                  <div class='col-5 '
-                  style="position: absolute;background: linear-gradient(108.12deg, #7E53FF 14.18%, rgba(126, 83, 255, 0) 43.27%), #5A54F5;right: 0;bottom: 0;">
-                    <div class="row">
-                      <div class="col-8">
-                        <p class="Title_1 text-white">
-                          On-Premises 서비스 도입을
-                          고려하고 계신가요?
-                        </p>
-                      </div>
-                      <div class="col align-end">
-                        <a href="mailto:contact@cnai.ai" class="bg-transparent border-0"><img src="/img/icon/05 arrow-right-circle.png" class="btn-sm-1" style="
-    height: 48px;
+              <div class="card border-0 shadow-sm h-100">
+                <div class="card-body p-md-5 p-0">
+                  <p class='Gray_1 Title_1_eng'>
+                    On-Premises 설치형 서비스
+                  </p>
+                  <div class='row g-md-5 g-0'>
+                    {% for i in range(1,4) %}
+                    <div class='col-md-5 col-11'>
+                      <p class='t-blue300 Title_1_eng mb-0'>{{ say1[i]['title'] }}</p>
+                      <p class='Gray_0 Body_1 col-md-8 col-12'>
+                        {{ say1[i]['description'] }}
+                      </p>
+                    </div>
+                    {% endfor %}
+                    <div class='col-6 d-none d-md-block'
+                      style="position: absolute;background: linear-gradient(108.12deg, #7E53FF 14.18%, rgba(126, 83, 255, 0) 43.27%), #5A54F5;right: 0;bottom: 0;">
+                      <div class="row p-3 mb-4">
+                        <div class="col-9">
+                          <p class="Title_1 text-white">
+                            On-Premises 서비스 도입을
+                            고려하고 계신가요?
+                          </p>
+                        </div>
+                        <div class="col-1 align-end d-flex flex-column">
+                          <a href="mailto:contact@cnai.ai" class="bg-transparent border-0 mt-auto"><img
+                              src="/img/icon/05 arrow-right-circle.png" class="btn-sm-1" style="
+  height: 48px;
 "></a>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <div class='col-md-2 col-12 ms-md-5 Title_1_eng p-5 text-white journeyNext' style="background-color: #938FF8">
+              SaaS
+            </div>
           </div>
-      
-
-        <div class='col-2 ms-5' style="background-color: #938FF8">
-          SaaS
         </div>
-      </div>
-   </div>
 
 
 
-   <div class="swiper-slide">
-    <div class='row' style="height:68vh";>
-      <div class='col-2 ms-5' style="background-color: #938FF8">
-        SaaS
-      </div>
+        <div class="swiper-slide">
+          <div class='row' style="height:68vh" ;>
 
-      <div class='col'>
-        <div class="card border-0 shadow-sm h-100">
-          <div class="card-body">
-            <p class='Gray_1 Title_1_eng'>
-              On-Premises 설치형 서비스
-            </p>
-            <div class='row g-5'>
-              {% for i in range(4,8) %}
-              <div class='col-5'>
-                <p class='t-blue300 Title_1_eng mb-0'>{{ say1[i]['title'] }}</p>
-                <p class='Gray_0 Body_1 col-8'>
-                  {{ say1[i]['description'] }}
-                </p>
-              </div>
-              {% endfor %}
-              <div class='col-5 '
-              style="position: absolute;background: linear-gradient(108.12deg, #7E53FF 14.18%, rgba(126, 83, 255, 0) 43.27%), #5A54F5;right: 0;bottom: 0;">
-                <div class="row">
-                  <div class="col-8">
-                    <p class="Title_1 text-white">
-                      On-Premises 서비스 도입을
-                      고려하고 계신가요?
-                    </p>
-                  </div>
-                  <div class="col align-end">
-                    <a href="mailto:contact@cnai.ai" class="bg-transparent border-0"><img src="/img/icon/05 arrow-right-circle.png" class="btn-sm-1" style="
+            <div class='col-md-2 col-12 ms-md-5 Title_1_eng p-5 text-white journeyPrev' style="background-color: #938FF8">
+              On-Premises
+            </div>
+            <div class='col'>
+              <div class="card border-0 shadow-sm h-100">
+                <div class="card-body  p-5">
+                  <p class='Gray_1 Title_1_eng '>
+                    SaaS 클라우드 서비스
+                  </p>
+
+                  <div class='row g-5'>
+                    {% for i in range(4,8) %}
+                    <div class='col-md-5 col-11'>
+                      <p class='t-blue300 Title_1_eng mb-0'>{{ say1[i]['title'] }}</p>
+                      <p class='Gray_0 Body_1 col-8'>
+                        {{ say1[i]['description'] }}
+                      </p>
+                    </div>
+                    {% endfor %}
+                    <div class='col-5 d-none d-md-block'
+                      style="position: absolute;background: linear-gradient(108.12deg, #7E53FF 14.18%, rgba(126, 83, 255, 0) 43.27%), #5A54F5;right: 0;bottom: 0;">
+                      <div class="row p-3 mb-4">
+                        <div class="col-9">
+                          <p class="Title_1 text-white ">
+                            Saas 클라우드 도입을
+                            고려하고 계신가요?
+                          </p>
+                        </div>
+                        <div class="col-1 align-end d-flex flex-column">
+                          <a href="mailto:contact@cnai.ai" class="bg-transparent border-0 mt-auto"><img
+                              src="/img/icon/05 arrow-right-circle.png" class="btn-sm-1" style="
 height: 48px;
 "></a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+
+
+
           </div>
         </div>
       </div>
-  
-
- 
-  </div>
-</div>
     </div>
+    <div class='container mt-5 offset-md-3 d-none'>
+
+      
+      <button id="" type="button" class='journeyPrev bg-transparent border-0 swiper-button-disabled' tabindex="-1" role="button" aria-label="Previous slide">
+        <img src='/img/icon/04 arrow-left-circle.png' class='btn-sm-1'></button>
+      <button id="" type="button" class='journeyNext bg-transparent border-0'><img
+          src='/img/icon/05 arrow-right-circle.png' class='btn-sm-1'></button>
+    </div>
+
+
+
+
+    <p class='text-center Gray_3 SubTitle_1 mb-5' style=  'margin-top: 35vh;'>
+      What does CN.AI do?
+    </p>
   </div>
-  <div class='container'>
-    <button id="" type="button" class='journeyPrev bg-transparent border-0'>
-      <img
-        src='/img/icon/04 arrow-left-circle.png' class='btn-sm-1'></button>
-    <button id="" type="button" class='journeyNext bg-transparent border-0'><img
-        src='/img/icon/05 arrow-right-circle.png' class='btn-sm-1'></button>
-  </div>
-  
-
-
-
-  <p class='text-center Gray_3 SubTitle_1 mb-5'>
-    What does CN.AI do?
-  </p>
-</div>
 </div>
 
 <img src='/img/3/4.png' class='w-100' alt="cnai do data">
-<section class='container'>
-  <div class='row'>
-    <div class='col'>
-      <img src='/img/3/5.png' class = 'w-100'>
-    </div>
-    <div class='col card rounded-0' style="background: #938FF8;
-        box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.1);">
-      <p class='Title_1 text-white col-md-6'>데이터 팀을 통합해주는
-        <br />데이터레이크
-      </p>
-      <p class='Title_3 col-md-6'>
-        데이터 엔지니어링
-        데이터 수집과 관리 간소화
-      </p>
-
-      <p class='text-bottom Body_1'>
-        Data Warehouse를 이용하면 자동화된 안정적인 방식으로 Raw 데이터, 전처리 데이터, 합성 데이터, 학습 Check point 등 다양한 데이터를 수집하여 ML 개발 lifecycle의
-        적절한 node와 연동하여 개발 효율을 향상합니다.
-      </p>
-    </div>
-  </div>
-
-  <div class='row text-white' style="background: #4E5968;
-    box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.1);">
-    <div class='row'>
-      <div class='col'>
-        <p class='Title_1_eng '>
-          CNAI ML & Devops
+<section class=' bgGray0' >
+  <section class="container">
+    <div class="row" style="margin-top: -8vh;">
+      <div class="col-md px-0 me-5 mb-5">
+        <img src="/img/3/5.png" class="w-100">
+      </div>
+      <div class="col card rounded-0 p-5 text-white mb-5" style="background: #938FF8;
+          box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.1);">
+        <p class="Title_1 col-md-7">데이터 팀을 통합해주는
+          <br>데이터레이크
         </p>
-        <p class='Title_3'>엔지니어링부터 프로덕션, 분석까지 ML 개발</p>
-
+        <p class="Title_3 col-md-6 fw-light">
+          데이터 엔지니어링
+          데이터 수집과 관리 간소화
+        </p>
+  
+        <p class="text-bottom Body_1 mt-auto mb-5">
+          Data Warehouse를 이용하면 자동화된 안정적인 방식으로 Raw 데이터, 전처리 데이터, 합성 데이터, 학습 Check point 등 다양한 데이터를 수집하여 ML 개발 lifecycle의
+          적절한 node와 연동하여 개발 효율을 향상합니다.
+        </p>
       </div>
-      <div class='col Body_1'>
-        lifecycle 전체 수명 주기를 효율화 할 수 있는 플랫폼입니다. 합성데이터를 포함한 양질의 데이터 파이프라인과 연계하여 ML 개발 생산성을 향상합니다.
-
+    </div>
+  
+  
+  
+   <div class="row text-white p-md-5" style="background: #4E5968;
+      box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.1);">
+      <div class="row mb-md-5">
+        <div class="col">
+          <p class="Title_1_eng mb-2">
+            CNAI ML &amp; Devops
+          </p>
+          <p class="Title_3">엔지니어링부터 프로덕션, 분석까지 ML 개발</p>
+  
+        </div>
+        <div class="col Body_1 lh-lg">
+          lifecycle 전체 수명 주기를 효율화 할 수 있는 플랫폼입니다. 합성데이터를 포함한 양질의 데이터 파이프라인과 연계하여 ML 개발 생산성을 향상합니다.
+  
+        </div>
       </div>
-
+  
+      <div class="row my-5">
+  
+        <img src="/img/3/6.png" class="w-100">
+  
+      </div>
     </div>
-  </div>
-  <img src='/img/3/6.png' class = 'w-100'>
+  
+  
+    <div class="row mt-5" style="padding-bottom: 35vh;">
+      <div class="col-md px-0 me-md-5">
+        <img src="/img/3/7.png" class="w-100">
+      </div>
+      <div class="col card rounded-0 text-white p-md-5" style="background: #4E5968;
+      box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.1);">
+        <p class="Title_1 text-white col-md-6">데이터 분석
+  
+        </p>
+        <p class="Title_3 fw-light">
+          학습 및 추론 데이터에서 새로운 인사이트 도출
+        </p>
+  
+        <p class="mt-auto Body_1">
+          On-premise와 SaaS 환경 모두에서 최신 데이터에 즉시 액세스할 수 있고 데이터 애널리스트와 데이터 사이언티스트가 새로운 인사이트를 도출할 수 있습니다.
 
-
-  <div class='row'>
-    <div class='col'>
-      <img src='/img/3/7.png' class = 'w-100'>
+        </p>
+      </div>
     </div>
-    <div class='col card rounded-0' style="background: #4E5968;
-    box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.1);">
-      <p class='Title_1 text-white col-md-6'>데이터 분석
-
-      </p>
-      <p class='Title_3 col-md-6'>
-        학습 및 추론 데이터에서 새로운 인사이트 도출
-      </p>
-
-      <p class='text-bottom Body_1'>
-        Data Warehouse를 이용하면 자동화된 안정적인 방식으로 Raw 데이터, 전처리 데이터, 합성 데이터, 학습 Check point 등 다양한 데이터를 수집하여 ML 개발 lifecycle의
-        적절한 node와 연동하여 개발 효율을 향상합니다.
-      </p>
-    </div>
-  </div>
-
+  </section>
 </section>
 
 
