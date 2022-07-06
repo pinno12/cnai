@@ -453,6 +453,22 @@ padding-left: 1rem; */
 .Gray_1,gray1 {
   color: #4E5968 !important;
 }
+.swiper-pagination-bullet{
+
+  border-bottom: 2px solid white;
+  width: 4rem;
+  height: 0.2rem !important;
+  display: inline-block;
+  border-radius: 0%;
+  background: none;
+}
+
+.swiper-pagination-bullet-active{
+  background: white;
+}
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+  margin:0
+}
 
 
 .gray2 {

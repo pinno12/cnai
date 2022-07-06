@@ -219,6 +219,15 @@ app.get('/data', (req,res) => {
 
 // en
 
+app.get('/en/tech', (req,res) => {
+    res.render('en/tech',{title: 'Core Tech-', say1: JSON.parse(JSON.stringify(tech['say1En']))});  
+})
+
+app.get('/en/data', (req,res) => {
+  res.render('en/data',{title: 'Synthetic Data-', say1: JSON.parse(JSON.stringify(Synthetic['say1En']))});  
+})
+
+
 app.get('/en/company', (req,res) => {
   let sql = "SELECT * FROM cnai WHERE category = 'companyHistory' OR category = 'companyLeader'";
 
@@ -313,12 +322,15 @@ let tech = {
   6: {title: "03",description: "서버 구축하는 비용을 절감하여 효율적인 운용이 가능합니다."},
 },
 
-  say1En:{1: { title: "Support for in-house club activities",
-  description: "In-house clubs to enjoy with colleagues such as golf, cycling, futsal, and climbing" },
-  2: { title: "Support for engagement and employee competency development",
-  description: "Support for the latest business equipment and self-development expenses such as seminars and book purchases" } ,
-  3: {title: "Food/Transporation Support",description: "Support for lunch and a cup of coffee, as well as snacks and overtime meal"},
-  4: {title: "Refresh vacation (3, 5, 7th Anniversary)",description: "Refresh vacation for team members who contributed to the company's growth (2 weeks)"}}
+say1En:{1: { title: "01",
+  description: "Continue to update CN.AI ‘s training Data and Dataset including Synthetic Data." },
+  2: { title: "02",
+  description: "Able to generate and provide Synthetic Data and connect your dataset to another dataset in CN.AI platform." } ,
+  3: {title: "03",description: "Able to protect Sensitive Data Leaks"},
+  4: {title: "01",description: "Continue to update CN.AI ‘s training Data and Dataset including Synthetic Data. "},
+  5: {title: "02",description: "Able to generate and provide Synthetic Data and connect your dataset to another dataset in CN.AI platform."},
+  6: {title: "03",description: "Efficient Operation by reducing Cloud server Installation Cost "},
+},
 
 }
 
@@ -329,16 +341,19 @@ let Synthetic = {
   description: "합성 데이터를 생성하는 플랫폼을 통해, 이미지 전처리 작업에 소요되는 시간을 3배 이상 단축시킬 수 있습니다." },
   2: { num: "02", title: '개인 정보 관련 문제가 없습니다. ', description: "개인정보 이슈로 인해 데이터 수집이 어려운 의료 분야 등, 다양한 산업에 도입할 수 있습니다." } ,
   3: {num: "03",title: 'Real Data에 존재하는 편향 문제를 쉽게 해결할 수 있습니다.',description: "Real Data엔 드물게 존재하는 편향된 데이터를 AI학습에 의도적으로 포함할 수 있습니다."},
-
+4:{num: '3', title:'Adaptation', des: '실제 데이터의 분포에 맞는 합성 데이터를 생성하여, AI가 가질 수 있는 편향이 생기지 않도록 합니다. '},
+5:{num: '4', title: 'Randomization', des:'다양하고 특수한 경우의 합성 데이터를 만들고, 데이터 부족과 불균형을 해결할 수 있도록 생성 과정의 랜덤성을 갖춰 다양성을 높이면서도 제어 가능한 합성을 지향합니다. '}
 },
 
-  say1En:{1: { title: "Support for in-house club activities",
-  description: "In-house clubs to enjoy with colleagues such as golf, cycling, futsal, and climbing" },
-  2: { title: "Support for engagement and employee competency development",
-  description: "Support for the latest business equipment and self-development expenses such as seminars and book purchases" } ,
-  3: {title: "Food/Transporation Support",description: "Support for lunch and a cup of coffee, as well as snacks and overtime meal"},
-  4: {title: "Refresh vacation (3, 5, 7th Anniversary)",description: "Refresh vacation for team members who contributed to the company's growth (2 weeks)"}}
 
+
+say1En:{1: { num: "01", title: 'Reduce the Cost and Time For Data Collection. ',
+  description: "Through Synthetic Data Generated Platform, the time for image preprocess task is reduced by 3x times." },
+  2: { num: "02", title: 'No Privacy Issue', description: "Able to Introduce Synthetic data to Many Industry that have a privacy issue for collecting Data" } ,
+  3: {num: "03",title: 'Solve Easily Data Bias in Real Data',description: "Able to intentionally add Biased Real data to Training Dataset for training AI Model"},
+4:{num: '3', title:'Adaptation', des: 'Since GAN can generate Synthetic Data from Real Data Distribution, it can prevent AI for making bias.'},
+5:{num: '4', title: 'Randomization', des:'We aim to generate synthetic data in a diverse and controllable way to make diverse and special Synthetic Data for Solving Data Shortage and Imbalance.'}
+}
 }
 
 

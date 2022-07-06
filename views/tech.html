@@ -5,16 +5,16 @@
   <img src="/img/3/1.png">
   <div class="card-img-overlay mx-auto">
     <section class="py-5 text-center container-fluid mb-5 text-light h-auto">
-      <div class='Title_1' style="margin-top: 40vh;" data-aos="fade-up">
-        {% block x1 %}CN.AI Data Warehouse{% endblock %}
+      <div class='Title_1' style="margin-top: 20vw;" data-aos="fade-up">
+        CN.AI Data Warehouse
       </div>
 
       <div class="rounded-1 shadow-lg Title_1 Gray_1 col-7  p-5" style="backdrop-filter: blur(14px);background: rgba(255, 255, 255, 0.2);margin-left: auto;bottom: 0;position: absolute;margin-right: auto;right: 0;left: 0;">
-        CN.AI Data Warehouse 플랫폼은
+        {% block x1 %} CN.AI Data Warehouse 플랫폼은
         자동화 된 ML 개발환경과 더불어 합성데이터를 제공하고, <br>
         <br>
         On-premise와 SaaS를 동시에 지원하는
-        개방적이고 유연한 확장을 지원합니다.
+        개방적이고 유연한 확장을 지원합니다.{% endblock %}
       </div>
     </section>
     
@@ -50,12 +50,9 @@ text-fill-color: transparent;">CN.AI MLOps
   opacity: 0.3; height: 240vh'></section>
 
   <div class="card-img-overlay p-0">
-    
-    <div class = 'text-center'>
-    <p class='ui button bgGray1 text-white SubTitle_1 text-center' id = '' style = 'margin-top:26vh;' >Train & Release Pipleline</p>
-  </div>
+        
     <div class='row offset-md-2 my-5 py-5'>
-      <img src='/img/3/3.png' alt='도너츠' class='w-75 mb-md-5 p-md-5 p-0 tech-1'>
+      <img src='/img/3/1.gif' alt='도너츠' class='w-100 mb-md-5 p-md-5 p-0 tech-1' >
     </div>
 
     <div class="swiper techSwiper" style="height:68vh" ;>
@@ -67,7 +64,7 @@ text-fill-color: transparent;">CN.AI MLOps
               <div class="card border-0 shadow-sm h-100">
                 <div class="card-body p-md-5 p-0">
                   <p class='Gray_1 Title_1_eng'>
-                    On-Premises 설치형 서비스
+                    {% block x2 %}  On-Premises 설치형 서비스{% endblock %}
                   </p>
                   <div class='row g-md-5 g-0'>
                     {% for i in range(1,4) %}
@@ -83,8 +80,8 @@ text-fill-color: transparent;">CN.AI MLOps
                       <div class="row p-3 mb-4">
                         <div class="col-9">
                           <p class="Title_1 text-white">
-                            On-Premises 서비스 도입을
-                            고려하고 계신가요?
+                            {% block x3 %}  On-Premises 서비스 도입을
+                            고려하고 계신가요?{% endblock %}
                           </p>
                         </div>
                         <div class="col-1 align-end d-flex flex-column">
@@ -118,7 +115,7 @@ text-fill-color: transparent;">CN.AI MLOps
               <div class="card border-0 shadow-sm h-100">
                 <div class="card-body  p-5">
                   <p class='Gray_1 Title_1_eng '>
-                    SaaS 클라우드 서비스
+                    {% block x4 %}  SaaS 클라우드 서비스{% endblock %}
                   </p>
 
                   <div class='row g-5'>
@@ -135,8 +132,8 @@ text-fill-color: transparent;">CN.AI MLOps
                       <div class="row p-3 mb-4">
                         <div class="col-9">
                           <p class="Title_1 text-white ">
-                            Saas 클라우드 도입을
-                            고려하고 계신가요?
+                            {% block x5 %}Saas 클라우드 도입을
+                            고려하고 계신가요?{% endblock %}
                           </p>
                         </div>
                         <div class="col-1 align-end d-flex flex-column">
@@ -185,17 +182,17 @@ height: 48px;
       </div>
       <div class="col card rounded-0 p-5 text-white mb-5" style="background: #938FF8;
           box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.1);">
-        <p class="Title_1 col-md-7">데이터 팀을 통합해주는
-          <br>데이터레이크
+        <p class="Title_1 col-md-7">{% block x6 %}데이터 팀을 통합해주는
+          <br>데이터레이크{% endblock %}
         </p>
         <p class="Title_3  fw-light">
-          데이터 엔지니어링 <br />
-          데이터 수집과 관리 간소화
+          {% block x7 %}데이터 엔지니어링 <br />
+          데이터 수집과 관리 간소화{% endblock %}
         </p>
   
         <p class="text-bottom Body_1 mt-auto mb-5">
-          Data Warehouse를 이용하면 자동화된 안정적인 방식으로 Raw 데이터, 전처리 데이터, 합성 데이터, 학습 Check point 등 다양한 데이터를 수집하여 ML 개발 lifecycle의
-          적절한 node와 연동하여 개발 효율을 향상합니다.
+          {% block x8 %}Data Warehouse를 이용하면 자동화된 안정적인 방식으로 Raw 데이터, 전처리 데이터, 합성 데이터, 학습 Check point 등 다양한 데이터를 수집하여 ML 개발 lifecycle의
+          적절한 node와 연동하여 개발 효율을 향상합니다.{% endblock %}
         </p>
       </div>
     </div>
@@ -209,12 +206,12 @@ height: 48px;
           <p class="Title_1_eng mb-2">
             CNAI ML &amp; Devops
           </p>
-          <p class="Title_3">엔지니어링부터 프로덕션, 분석까지 ML 개발</p>
+          <p class="Title_3">{% block x9 %}엔지니어링부터 프로덕션, 분석까지 ML 개발{% endblock %}</p>
   
         </div>
         <div class="col Body_1 lh-lg">
-          lifecycle 전체 수명 주기를 효율화 할 수 있는 플랫폼입니다. 합성데이터를 포함한 양질의 데이터 파이프라인과 연계하여 ML 개발 생산성을 향상합니다.
-  
+          {% block x10 %}lifecycle 전체 수명 주기를 효율화 할 수 있는 플랫폼입니다. 합성데이터를 포함한 양질의 데이터 파이프라인과 연계하여 ML 개발 생산성을 향상합니다.
+          {% endblock %}
         </div>
       </div>
   
@@ -232,16 +229,15 @@ height: 48px;
       </div>
       <div class="col card rounded-0 text-white p-md-5" style="background: #4E5968;
       box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.1);">
-        <p class="Title_1 text-white col-md-6">데이터 분석
+        <p class="Title_1 text-white col-md-6">{% block x11 %}데이터 분석{% endblock %}
   
         </p>
         <p class="Title_3 fw-light">
-          학습 및 추론 데이터에서 새로운 인사이트 도출
+          {% block x12 %}학습 및 추론 데이터에서 새로운 인사이트 도출{% endblock %}
         </p>
   
         <p class="mt-auto Body_1">
-          On-premise와 SaaS 환경 모두에서 최신 데이터에 즉시 액세스할 수 있고 데이터 애널리스트와 데이터 사이언티스트가 새로운 인사이트를 도출할 수 있습니다.
-
+          {% block x13 %}  On-premise와 SaaS 환경 모두에서 최신 데이터에 즉시 액세스할 수 있고 데이터 애널리스트와 데이터 사이언티스트가 새로운 인사이트를 도출할 수 있습니다.{% endblock %}
         </p>
       </div>
     </div>
