@@ -7,7 +7,7 @@
             <img src = '/img/icon/08 hamburger.png' id = 'bars{{ dd }}' class = "{{ a1 }}" click = "burgerAction('#bars{{ dd }}','#back{{ dd }}')">
           <img src = '/img/icon/09 back.png' id = 'back{{ dd }}' class = 'navicon d-none' onclick = "burgerAction('#back{{ dd }}','#bars{{ dd }}')">
         </a>
-          <a class="navbar-brand mx-auto mb-2 me-md-5 goEng" href="/" style = 'margin-left:21% !important'> <img class="" src="/img/common/CNAI({{ ee }}).png" width="80px"></a>       
+          <a class="navbar-brand mx-auto mb-2 me-md-5 goEng" href="/home" style = 'margin-left:21% !important'> <img class="" src="/img/common/CNAI({{ ee }}).png" width="80px"></a>       
           <div class="collapse navbar-collapse" id="gnb">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 Body_2_eng h-100">
               <li class="nav-item  my-auto lineOn{{dd}}  text-center ms-3 d-none d-md-block">
@@ -35,7 +35,7 @@
               </li>
   
               <li class="nav-item my-auto Gray_{{ e }} d-block d-md-none mobileMenu">
-                 <a class = 'goEng Gray_{{ dd }}' href = '/'>KO</a> | <a class = 'goEng Gray_{{ dd }}' href = '/en/'> EN </a>
+                 <a class = 'goEng Gray_{{ dd }}' href = '/home'>KO</a> | <a class = 'goEng Gray_{{ dd }}' href = '/en/home'> EN </a>
               </li>
 
               <li class="ui compact menu nav-item my-auto  h-100 ms-4 d-none d-md-block {{ a }} " style="background: none;">

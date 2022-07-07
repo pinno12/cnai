@@ -49,6 +49,8 @@ nunjucks.configure('views', {
   autoescape: true,
   express: app
 });
+
+
 app.set("views", path.join(__dirname, "views"));
 // app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static("public"));
@@ -140,6 +142,11 @@ app.listen(8001, () => {
 
 
 app.get("/", function (req, res) {
+  res.redirect("/en/home");
+  
+ });
+
+ app.get("/home", function (req, res) {
   let sql  ="SELECT * FROM cnai WHERE category = 'homeNews' OR category = 'main'";
   db.all(sql,[],(err,data)=>{
     if (err){
@@ -371,7 +378,7 @@ app.get("/en/career", (req, res) => {
 });
 
 
-app.get("/en", function (req, res) {
+app.get("/en/home", function (req, res) {
   let sql  ="SELECT * FROM cnai WHERE category = 'homeNews'";
   db.all(sql,[],(err,data)=>{
     if (err){
@@ -382,5 +389,7 @@ app.get("/en", function (req, res) {
   }
   })  
  });
+
+
 
 
