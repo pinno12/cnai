@@ -179,8 +179,12 @@
   }
 
   .c-text-2 {
-    font-family: made-tommy-outline;
-    font-size: 5.93rem;
+    /* font-family: made-tommy-outline;*/
+    font-size: 5.93rem; 
+    font-family: 'MADE TOMMY';
+    -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.6px ;
+color:#5A54F5;
   }
 
   .process {
@@ -205,7 +209,9 @@
 </a>
 <!-- </div> -->
 
-<section id='banner' class='container masthead'>
+<section id='banner' class='container masthead' style="
+margin-bottom: 18.75vw;
+">
   <div class='row'>
     <div class='col-8'>
       <h1 class='text-c'>{% block x2 %} 함께이기에 <br />
@@ -479,13 +485,14 @@
 
 
 {% endblock %}
-{% block title %}CNAI의 개발팀의 일상 엿보기 {% endblock %}
-{% block fB %}{% endblock %}
-{% block btn %} Tech Blog 바로가기 {% endblock %}
+
+{% block title %}CN.AI 사람들의 일상 엿보기 {% endblock %}
+{% block fB %}https://www.instagram.com/cn.table/{% endblock %}
+{% block btn %}CN Table 바로가기{% endblock %}
 
 {% block localScript %}
 <script>
-document.getElementById('btn-career').style = 'display:none;'
+// document.getElementById('btn-career').style = 'display:none;'
   makeSwiper = (className) => {
     new Swiper(className, {
       slidesPerView: 1,

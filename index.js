@@ -131,8 +131,8 @@ const db = new sqlite3.Database(db_name, err => {
 });
 
 
-app.listen(8080, () => {
-    console.log("다음 주소에 연결되었어요( http://localhost:8080/ ) !");
+app.listen(80, () => {
+    console.log("다음 주소에 연결되었어요( http://localhost:80/ ) !");
 });
 
 

@@ -49,7 +49,7 @@
     padding-left:0;
     padding-right: 0;
   }
-  .member-Tab,.Title_1,.Title_2,.Title_2_eng,.Title_3_eng, .Title_3, .Title_1_eng, .Body_1, .Body_1_eng, .Body_2, .Body_2_eng, .cn2Title, .SubTitle_1, .text-c, .c-text-2{
+  .member-Tab,.Title_1,.Title_2,.Title_2_eng,.Title_3_eng, .Title_3, .Title_1_eng, .Body_1, .Body_1_eng, .Body_2, .Body_2_eng, .cn2Title, .SubTitle_1, .text-c{
     font-size: 1rem !important;
   }
 
@@ -241,8 +241,8 @@ button{
 
 .Title_1 {
   font-family: 'Pretendard';
-  font-style: normal;
-  font-weight: 800;
+  
+  font-weight: bolder;
   font-size: 2.25rem;
   line-height: 3.5rem;
   /* Extra bold */
@@ -252,7 +252,7 @@ button{
 .Title_2 {
   /* Pretendard / Semi Bold / 1.875rem / line height 2.813rem / letter spacing -2%  */
   font-family: 'Pretendard';
-  font-style: normal;
+
   font-weight: 600;
   font-size: 1.875rem;
   line-height: 2.813rem;
@@ -288,7 +288,7 @@ color: #4E5968;
   font-family: 'Pretendard';
   font-weight: 500;
   font-size: 1.25rem;
-  /* line-height: 2.25rem; */
+  line-height: 2.25rem !important;
   /* or 180% */
   letter-spacing: -2%;
 }
@@ -305,14 +305,14 @@ color: #4E5968;
 .Title_1_eng {
   font-family: made-tommy;
   font-size: 2.375rem;
-  font-weight: 500;
+  font-weight: normal;
   /* line-height: 3.5rem; */
   letter-spacing: 0%;
 }
 
 .Title_2_eng {
   font-family: 'made-tommy';
-  font-weight: 400;
+  font-weight: normal;
   font-size: 2rem;
   /* line-height: 2.813rem; */
   letter-spacing: 0%;
@@ -321,7 +321,7 @@ color: #4E5968;
 
 .Title_3_eng {
   font-family: 'made-tommy';
-  font-weight: 400;
+  font-weight: normal;
   font-size: 1.75rem;
   line-height: 2.625rem;
   letter-spacing: 0%;
@@ -405,10 +405,14 @@ letter-spacing: -0.02em;
   font-size: 1rem;
   line-height: 2rem;
   letter-spacing: 0%;
-  background: #F0F0FF !important;
+  
 border-radius: 5px;
 /* padding-right: 1rem;
 padding-left: 1rem; */
+}
+
+.btn-blue-tab.is-checked{
+  background: #F0F0FF !important;
 }
 
 ::selection {
@@ -600,4 +604,8 @@ background-clip: text;
 
   .bg-blur {
     background: rgba(255, 255, 255, 0.5);
+  }
+
+  .bgBlur{
+    filter: blur(14px);
   }
