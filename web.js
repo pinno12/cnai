@@ -272,12 +272,6 @@ app.get('/en/community/20220405', (req,res) => {
 })
 
 let career = {
-//   cHeadEn: {1: "Search CN.AI Job Openings", 2: "Together, We shine brighter",0:"Search CN.AI Job Openings", 4: 'The way we advance'},
-//   cHeadKr: {1:'함께이기에 <br />빛이 나는 사람들', 2:'그들의 이야기가 궁금하다면', 
-//   3: `아낌없는 지원으로 업무 몰입 뿐 아니라,
-//   팀원들의 성장과 자아실현까지 이끌어갑니다`,
-//   0: '채용공고 보러가기', 4:'우리가 성장하는 방식'
-// },
 say1Ko: {1: { title: "시행착오의 가치를 믿어요.", id: 1, description: "실패는 잘못이 아니에요. 넘어지는 것을 두려워하지 않고, 다시 일어나 두 걸음 더 앞으로 나아가요." },
 2: {title: "함께 성장하는 힘을 믿어요.", id: 2, description: "혼자보다 함께할 때 더 큰 변화를 만들 수 있음을 믿고, 신뢰를 기반으로 소통하며 하나의 목표를 위해 협력해 나가요."} ,
 3: {title: "스스로 업무를 정의해나가요.", id: 3, description: "주체적으로 롤을 정의하고 업무를 선택하며 깊이 몰입해요. 끊임없이 역량을 쌓으며 더 나은 미래를 만들어 나가요."},
@@ -391,5 +385,6 @@ app.get("/en/home", function (req, res) {
  });
 
 
+// 관리자 페이지
 
 

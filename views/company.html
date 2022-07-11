@@ -208,7 +208,7 @@ line-height: 150%;
         <div class="row g-0 justify-content-between Gray_5_bg h-100" >
           <div class="col-md-7 d-flex flex-column">
             <div class="card-body p-4">            
-              <div class="card-title Gray_0 Body_1_eng">{{ s.name }} <span class="Gray_2 Body_2_eng ms-2">{{ s.title }}</span></div>
+              <div class="card-title Gray_0 Body_1_eng">{{ s.name }} <span class="Gray_2 Body_2_eng ms-2">{{ s.title | striptags(true) | escape | nl2br}}</span></div>
             </div>
             <div class="card-footer mt-auto bg-transparent border-0">
                 <ul class="ps-3 mt-auto">
