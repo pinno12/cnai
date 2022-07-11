@@ -2,13 +2,13 @@
 
 <nav class="navbar navbar-expand-lg  py-0 {{ aa }} " id="{{ bb }}"  >
         <div class="container h-100 mobileNav px-2">
-          <a class="navbar-toggler border-0 " type="button" data-bs-toggle="collapse" data-bs-target="#gnb" aria-controls="gnb"
+          <a class="navbar-toggler border-0 " type="button" data-bs-toggle="collapse" data-bs-target="#gnb{{ dd }}" aria-controls="gnb"
             aria-expanded="false" aria-label="Toggle navigation" {{ cc }}>
             <img src = '/img/icon/08 hamburger.png' id = 'bars{{ dd }}' class = "{{ a1 }}" click = "burgerAction('#bars{{ dd }}','#back{{ dd }}')">
           <img src = '/img/icon/09 back.png' id = 'back{{ dd }}' class = 'navicon d-none' onclick = "burgerAction('#back{{ dd }}','#bars{{ dd }}')">
         </a>
           <a class="navbar-brand mx-auto mb-2 me-md-5 goEng" href="/home" style = 'margin-left:21% !important'> <img class="" src="/img/common/CNAI({{ ee }}).png" width="80px"></a>       
-          <div class="collapse navbar-collapse" >
+          <div class="collapse navbar-collapse" id = 'gnb{{ dd }}'>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 Body_2_eng h-100">
               <li class="nav-item  my-auto lineOn{{dd}}  text-center ms-3 d-none d-md-block">
                 <a class="nav-link text-uppercase Gray_{{e}} h-100 py-0 goEng" href="/company">company</a>
