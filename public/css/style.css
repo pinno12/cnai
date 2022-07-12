@@ -23,6 +23,10 @@
 .navbar-brand{
   margin-right: 36vw;
 }
+
+.navbar-nav{
+  background: white;
+}
   .mobileNav{
     padding: 0;
   }
@@ -79,11 +83,13 @@
 .gnbBtn:hover, .gnbBtn:active{
   color: #5A54F5 !important;
   background: transparent !important;
+  border: 1px solid #5A54F5 !important;
 }
 
-button.gnbBtn:hover, .gnbBtn:active{
+/* button.gnbBtn:hover, .gnbBtn:active{
   border: 2px solid #5A54F5 !important;
-}
+
+} */
 
 .ui.menu .ui.dropdown .menu>.item{
   color: #BDBDBD !important;

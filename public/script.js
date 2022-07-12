@@ -34,11 +34,6 @@ goGlobal = () => {
   }
 }
 
-
-
-
-// console.log(zc['c1'])
-
 showUp = (myId, category) => {
   let bright = myId + '-img';
   let title = myId + '-title';
@@ -60,26 +55,13 @@ showUp = (myId, category) => {
   }
 }
 
-// $('#bars1,#bars2').click(function(){
-//   $(this).addClass('d-none');
-//   $('#back').removeClass('d-none');
-// });
 
-burgerAction = (x,y)=>{
- 
-   
+burgerAction = (x,y)=>{   
     $(x).addClass('d-none');
     console.log($(this))
     $(y).removeClass('d-none');
-
   
 }
-
-// burgerAction('#bars1','#back1')
-// burgerAction('#back1','#bars1')
-// burgerAction('#bars2','#back2');
-// burgerAction('#back2','#bars2')
-
 
 changeColor = (item) =>{
   let id = item.id ;  
@@ -90,25 +72,6 @@ removeColor = (item) =>{
   // + '1';  
   document.getElementById(id).classList.remove('Gray_5')
 }
-
-// showList = () => {
-//   document.getElementsByClassName('drop-1-box')[0].classList.add("open");
-//   console.log('in')
-// }
-
-// $gnbList.mouseenter(function(){  document.getElementsByClassName('drop-1-box')[0].classList.add("open");
-// console.log('in')});
-
-
-// $gnbList.mouseleave(function(){
-  
-//   document.getElementsByClassName('drop-1-box')[0].classList.remove("open"); console.log('out')
-// });
-
-
-// gnb_return = () => {
-//   document.getElementsByClassName('drop-1-box')[0].classList.remove("open");
-// }
 
 homeShow = (myId) =>{
   let blur = myId + '-img';
@@ -122,8 +85,6 @@ homeShow = (myId) =>{
     .transition('fade up')
     ;
 }
-
-
 
 
 $('.masthead')

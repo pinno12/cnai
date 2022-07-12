@@ -84,12 +84,12 @@
   <main role="main" class="flex-shrink-0 ">
 
     <!-- Following Menu -->
-    {% import 'partials/navLight.nj' as h %}
+    {% import 'partials/navLight.html' as h %}
     {{ h.myHeader() }}
 
 
     <!-- 최상단 헤더 -->
-    {{ h.myHeader(z1 = 'bgGray0',a1= 'naviconDark',aa = 'navbar-dark bg-dark', bb= '', cc ='', dd = '',  e = '5', ee = 'white', a = '', b= 'bgGray0', c='white' ) }}
+    {{ h.myHeader(z1 = 'bgGray0',a1= 'naviconDark',aa = 'navbar-dark bg-dark', bb= '', cc ='', dd = '',  e = '5', ee = 'white', a = '', b= 'bgGray0', c='white', z2 = 'inverted violet') }}
     
     
     {% block content %} {% endblock %}

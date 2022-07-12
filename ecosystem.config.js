@@ -1,12 +1,10 @@
 module.exports = {
   apps : [{
-    script: 'index.js',
-    watch: '.'
-  }, {
-    script: './service-worker/',
-    watch: ['./service-worker']
+    script: 'web.js',
+    watch: '.',
+    watch_delay: 3000
   }],
-
+​
   deploy : {
     production : {
       user : 'SSH_USERNAME',

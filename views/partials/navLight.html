@@ -1,0 +1,87 @@
+  {% macro myHeader(z1 = 'bg-Gray6', a1 = 'navicon',aa = 'shadow-sm transition hidden ui top fixed menu', bb = 'header_light', cc = "style='position: absolute;height: 100%;top: 2vh;'", dd= '2', ee = 'blue', e = '0' , a = 'border-0 shadow-none', b = '', c = 'dark', z2 = 'black') %}
+
+<nav class="navbar navbar-expand-lg  py-0 {{ aa }} " id="{{ bb }}"  >
+        <div class="container h-100 mobileNav px-2">
+          <a class="navbar-toggler border-0 " type="button" data-bs-toggle="collapse" data-bs-target="#gnb{{ dd }}" aria-controls="gnb"
+            aria-expanded="false" aria-label="Toggle navigation" {{ cc }}>
+            <img src = '/img/icon/08 hamburger.png' id = 'bars{{ dd }}' class = "{{ a1 }}" onClick = "burgerAction('#bars{{ dd }}','#back{{ dd }}')">
+          <img src = '/img/icon/09 back.png' id = 'back{{ dd }}' class = 'navicon d-none' onClick = "burgerAction('#back{{ dd }}','#bars{{ dd }}')">
+        </a>
+          <a class="navbar-brand mx-auto mb-2 me-md-5 goEng" href="/home" style = 'margin-left:21% !important'> <img class="" src="/img/common/CNAI({{ ee }}).png" width="80px"></a>       
+          <div class="collapse navbar-collapse" id = 'gnb{{ dd }}'>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 Body_2_eng h-100">
+              <li class="nav-item  my-auto lineOn{{dd}}  text-center ms-3 d-none d-md-block">
+                <a class="nav-link text-uppercase Gray_{{e}} h-100 py-0 goEng" href="/company">company</a>
+              </li>
+              <li class="nav-item  my-auto h-100 d-block d-md-none px-3 py-2 position-relative navTopLine bg-Gray6" >
+                <a class=" text-uppercase Gray_0 position-absolute top-50 start-2 translate-middle-y" href="mailto:contact@cnai.ai">CN.AI MLOps 도입 문의는</a>
+                <a href= 'mailto:contact@cnai.ai'class="nav-item mini ui button me-2 Gray_0 gnbBtn float-end mobileMenu " style="background-color: #938FF8;" id="">CONTACT US</a>
+              </li>
+              <li class="nav-item my-auto ">
+                <a class="nav-link text-uppercase Gray_0 h-100 d-block d-md-none mobileMenu goEng" href="/company">company</a>
+              </li>
+              <li class="nav-item my-auto ">
+                <a class="nav-link text-uppercase Gray_0 h-100 d-block d-md-none mobileMenu goEng" href="/tech">CORE TECH</a>
+              </li>
+              <li class="nav-item my-auto ">
+                <a class="nav-link text-uppercase Gray_0 h-100 d-block d-md-none mobileMenu goEng" href="/data">Synthetic Data</a>
+              </li>
+              <li class="nav-item my-auto nav-scroller">
+                <a class="nav-link text-uppercase Gray_0 h-100 d-block d-md-none mobileMenu goEng" href="/community">community</a>         
+              </li>
+  
+              <li class="nav-item my-auto ">
+                <a class="nav-link text-uppercase Gray_0 h-100 d-block d-md-none mobileMenu goEng" href="/career">career</a>
+              </li>
+  
+              <li class="nav-item my-auto Gray_0 d-block d-md-none mobileMenu">
+                 <a class = 'Gray_2' href = '/home'>KO</a> | <a class = 'Gray_2' href = '/en/home'> EN </a>
+              </li>
+
+              <li class="ui compact menu nav-item my-auto  h-100 ms-4 d-none d-md-block {{ a }} " style="background: none;">
+                <div class="ui simple dropdown item Gray_{{ e }} en d-none d-md-block lineOn{{ dd}}Dropdown" id="moveArrow" tabindex="0">
+                  CORE TECH
+                  <i class="angle down icon" id="myArrow"></i>
+                  <div class="menu {{ b }}" tabindex="-1">
+                    <a class="item goEng" href="/tech#warehouse">Data Warehouse</a>
+                    <a class="item goEng" href="/data">Synthetic data </a>
+                   <a class="item d-none goEng" href="/community">Product
+                      <i class="external alternate icon"></i></a>
+                  </div>
+                </div>
+              </li>
+
+              <li class="ui compact menu nav-item my-auto  h-100 ms-4 d-none d-md-block {{ a }} " style="background: none;">
+                <div class="ui simple dropdown item Gray_{{ e }} en d-none d-md-block lineOn{{ dd}}Dropdown" id="moveArrow" tabindex="0">
+                  COMMUNITY
+                  <i class="angle down icon" id="myArrow"></i>
+                  <div class="menu {{ b }}" tabindex="-1">
+                    <a class="item goEng" href="/community" id = '/en/community'>Publications</a>
+                    <a class="item d-none goEng" href="/community">Tech Blog
+                      <i class="external alternate icon"></i></a>
+                  </div>
+                </div>
+              </li>
+
+              <div class="ui compact menu nav-item ms-3 my-auto h-100  d-none d-md-block {{a}}" style="background: none;">
+                <div class="ui simple dropdown item Gray_{{ e }} en text-uppercase lineOn{{ dd }}Dropdown" id="moveArrow" tabindex="0">
+                  career
+                  <i class="angle down icon" id="myArrow"></i>
+                  <div class="menu {{ b }}" tabindex="-1">
+                    <a class="item goEng" href="/career">CN.AI Team</a>
+                    <a class="item" target = '_blank' href="https://defiant-sodalite-85a.notion.site/Beta-6dfeaaf6dd024663a7467620ca7dad24">Recruit<i class="external alternate icon"></i></a>
+                  </div>
+                </div>
+              </div>
+            </ul>
+            <li class="nav-item my-auto  navbar-nav d-none d-md-block"> <button onclick = 'goGlobal()' class="nav-link bg-transparent border-0 ">
+              <i class="globe icon text-{{ c }} gnbBtn"></i></button> 
+            </li> 
+            <a href= 'mailto:contact@cnai.ai'class="nav-item ui {{ z2 }} basic button me-2 ms-5 gnbBtn d-none d-md-block" id="">CONTACT US</a>
+          </div>
+        </div>
+      </nav>
+
+      
+  {% endmacro %}
+

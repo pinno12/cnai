@@ -90,36 +90,48 @@ app.post("/level", (req, res) => {
 
 app.get('/login',
   function(req, res){
-    res.render('login');
+    res.render('admin/login');
   }
   );
   
-  app.post('/login', 
+  app.post('/login',
   passport.authenticate('local', { failureRedirect: '/login' }),
   function(req, res) {
-    if (req.user.username == '1'){
-      console.log(req.user.username)
-      res.redirect('result');
-
-      
-    }else{
-      res.redirect('level');
-    }
-    
+      res.redirect('admin/cnai');          
   });
   
+
+  app.get('/admin/cnai',function(req,res){
+  let sql  ="SELECT * FROM cnai";
+  db.all(sql,[],(err,data)=>{
+    if (err){
+      return console.error(err.message);
+    }else{
+    res.render('admin/cnai', {data:data});
+  }
+  })
+});
+ 
+  app.get("/home", function (req, res) {
+    let sql  ="SELECT * FROM cnai WHERE category = 'homeNews' OR category = 'main'";
+    db.all(sql,[],(err,data)=>{
+      if (err){
+        return console.error(err.message);
+      }else{
+  
+      res.render('index', {title: 'Hello',fB: 'CN.AI의 다양한 AI 솔루션에 대해 궁금하신가요?', data:data,  say1: JSON.parse(JSON.stringify(main['say1Ko']))});
+    }
+    })
+    
+   });
+
+
+
 app.get('/logout',
   function(req, res){
     req.logout();
     res.redirect('/');
   });
-
-app.get('/profile',
-  require('connect-ensure-login').ensureLoggedIn(),
-  function(req, res){
-    res.render('profile', { user: req.user });
-  });
-
 
 
 
